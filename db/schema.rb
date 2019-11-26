@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_163656) do
+ActiveRecord::Schema.define(version: 2019_11_26_121204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_11_25_163656) do
     t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "creator_id"
+    t.index ["creator_id"], name: "index_missions_on_creator_id"
     t.index ["user_id"], name: "index_missions_on_user_id"
   end
 
@@ -54,5 +56,6 @@ ActiveRecord::Schema.define(version: 2019_11_25_163656) do
   end
 
   add_foreign_key "missions", "users"
+  add_foreign_key "missions", "users", column: "creator_id"
   add_foreign_key "wish_lists", "users"
 end
