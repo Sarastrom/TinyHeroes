@@ -8,10 +8,12 @@
     <% end %> <br>
 
 
+ <h6>Missions</h6>
+    <% current_user.missions.where(completed: false).each do |mission| %>
+    <% end %>
+  </div>
     <%= link_to 'Edit Profile', edit_user_registration_path, class:"EditProfile"%> <br>
     <%= link_to 'Dashboard', missions_path, class:"Dashboard"%> <br>
     <%= link_to 'Wish List', user_wish_list_path(current_user), class:"WishList"%>
-
-
   </div>
 </div>
