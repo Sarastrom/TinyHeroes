@@ -6,8 +6,7 @@ left: 43px;
 top: 626px;
 background: #5081F6;
 border-radius: 20px;
-color: white;
-font-weight: bold;
+border-style: none;
 }
 
 #signup_button {
@@ -18,9 +17,12 @@ left: 43px;
 top: 700px;
 background: #F6C953;
 border-radius: 20px;
+border-style: none;
+}
+
+.button_text {
 color: white;
 font-weight: bold;
 }
-
 
 
