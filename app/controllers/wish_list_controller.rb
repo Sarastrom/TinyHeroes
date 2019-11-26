@@ -29,6 +29,6 @@ class WishListController < ApplicationController
   private
 
   def wish_list_params
-    params.require(:Wish_list).permit(:image, :image, :amount)
+    params.require(:Wish_list).permit(:image, :title, :amount)
   end
 end
