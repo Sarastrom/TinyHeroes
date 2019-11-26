@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+.homeImage {
+background-image: linear-gradient(rgba(127, 122, 122, 0.4), rgba(18, 0, 0, -1.6)), url(laundry.png);
+background-size: cover;
+background-repeat: no-repeat;
+width: 100vw;
+height: 100vh;
+// linear-gradient: 0 0 15px rgba(0,0,0,0.2);
+background-position: center;
+display: flex;
+p{
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  }
+}
