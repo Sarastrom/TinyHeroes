@@ -8,6 +8,12 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :first_name,
+                required: true,
+                input_html: { autocomplete: "first-name" } %>
+    <%= f.input :last_name,
+                required: true,
+                input_html: { autocomplete: "last-name" } %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -15,6 +21,18 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <div class="form-group">
+      <label class="control-label radio optional">Avatar</label>
+      <input type="hidden" name="user[avatar]" value="">
+      <div class="avatar-choices">
+        <% User::AVATAR_NAMES.each do |avatar| %>
+          <input type="radio" class="d-none" value="<%= avatar %>" name="user[avatar]" id="user_avatar_<%= avatar %>">
+          <label for="user_avatar_<%= avatar %>">
+            <%= image_tag avatar, style: "height: 100px;" %>
+          </label>
+        <% end %>
+       </div>
+    </div>
   </div>
 
   <div class="form-actions">
