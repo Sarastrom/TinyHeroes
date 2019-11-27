@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   end
   resources :wish_list, only: [:new, :create, :destroy, :update, :edit]
 
-    get 'profile', to: 'pages#profile'
-    get 'users/:id/wish_list', to: 'wish_list#index', as: "user_wish_list"
+  get 'profile', to: 'pages#profile'
+  get 'users/:id/wish_list', to: 'wish_list#index', as: "user_wish_list"
+
+  #need to add a way to nest so we can get the children on the page
+  get 'users/family', to: 'users#family'
 
 end
