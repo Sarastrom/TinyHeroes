@@ -1,20 +1,35 @@
 <div class="container">
-  <div class="task-card">
-    <% @missions.each do |mission| %>
-      <h5><%= mission.icon %></h5>
-      <h5><%= mission.name %></h5>
-      <p><%= mission.description %></p>
-      <p><%= mission.reward %></p>
-      <p><%= mission.completed %></p>
-      <hr>
-    <% end %>
+  <div class="task-cards">
+    <div class="button-card" data-toggle="modal" data-target="#new-mission-modal">
+      <i class="fas fa-plus" ></i>
+    </div>
+      <% @missions.each do |mission| %>
+        <div class="task-card">
+
+          <div class="task-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+
+          <div class="task-card-info">
+            <h2><%= mission.name %></h2>
+            <p><%= mission.description %></p>
+          </div>
+
+          <div class="task-card-buttons">
+            <div class="coin"><h6><%= mission.reward %></h6></div>
+            <p><%= mission.completed %></p>
+          </div>
+
+        </div>
+      <% end %>
+    <%= link_to "Back", :back %>
   </div>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> + </button>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade" id="new-mission-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Create a new mission</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -24,7 +39,7 @@
           <%= f.input :name %>
           <%= f.input :description %>
           <%= f.input :icon %>
-          <%= f.submit %>
+          <%= f.submit "Create", class: "btn btn-primary" %>
         <% end  %>
       </div>
       <!-- <div class="modal-footer">
@@ -35,5 +50,4 @@
   </div>
 </div>
 </div>
-   <%= link_to "Back", :back %>
-</div>
+
