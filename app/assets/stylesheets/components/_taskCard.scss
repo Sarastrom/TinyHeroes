@@ -1,53 +1,68 @@
+body {
+  background-color: #5ec8f161;
+}
+
+
 .task-cards {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
 }
 
 .task-card {
-display: flex;
-justify-content: space-between;
-align-items: center;
-height: 80px;
-width: 340px;
-background: white;
-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-padding: 10px;
-margin-bottom: 20px;
-border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  width: 340px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .task-card h2 {
-font-size: 12px;
-font-weight: bold;
+  color: #0B3BAE;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2px;
 }
 
 .task-card p {
-font-size: 10px;
+  font-size: 10px;
 }
 
 .task-card-info {
-padding: 10px;
-flex-grow: 1;
-// height: inherit;
+  padding: 10px;
+  flex-grow: 1;
+  // height: inherit;
 p {
-  margin-bottom: 0;
+  margin-bottom: 4px;
   }
 }
 
+.task-card-info h3 {
+  font-size: 10px;
+  font-weight: bold;
+  color: #F48779;
+  margin-bottom: 0px;
+}
+
 .task-card-buttons {
-display: flex;
-h6{
-font-size: 14px;
+  display: flex;
+  h6 {
+    font-size: 10px;
+    margin-bottom: 0;
   }
 }
 
 .task-icon {
-color: #58B873;
-font-size: 38px;
-position: relative;
-padding:5px;
+  color: #12C0B6;
+  font-size: 38px;
+  position: relative;
+  padding:5px;
 }
 
 .modal-content {
@@ -56,58 +71,64 @@ border-radius: 10px;
 }
 
 .modal-header {
-border-bottom: none;
-margin: 0 auto;
-background-color: #58B873;
-border-radius: 10px 10px 0 0;
-display: flex;
-align-items: center;
-color: white;
-h5 {
-font-weight: bold!important;
-}
+  border-bottom: none;
+  margin: 0 auto;
+  background-color: #58B873;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  h3 {
+  font-weight: bold!important;
+  }
 }
 
 .form-group {
-color: white;
+  color: white;
 }
 
 .button-card {
-display: flex;
-align-items: center;
-justify-content: space-around;
-color: white;
-font-size: 32px;
-height: 80px;
-width: 340px;
-background: #F48779;
-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-padding: 10px;
-margin-bottom: 20px;
-border-radius: 5px;
-position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 32px;
+  height: 80px;
+  width: 340px;
+  background: #F48779;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
 }
 
 .coin {
-border-radius: 50%;
-background-color: #F6C953;
-padding: 5px;
-color: white;
-width: 26px;
-height: 26px;
-margin-right: 6px;
-border: 2px solid #EABA3D;
-text-align: center;
+  border-radius: 50%;
+  background-color: #F6C953;
+  padding: 3px;
+  color: white;
+  border: 2px solid #EABA3D;
+  margin-right: 5px;
 }
 
 .btn-primary {
-color: #fff;
-font-weight: bold;
-background-color: #F6C953;
-border-radius:5px;
-border-color: #F6C953;
+  color: #fff;
+  font-weight: bold;
+  background-color: #F6C953;
+  border-radius:5px;
+  border-color: #F6C953;
 }
 
+.btn-primary:hover {
+  color: #fff;
+  background-color: #f7c026;
+  border-color: #f7c026;
+}
 .close {
-color: white;
+  color: white;
+}
+
+.text-muted {
+  color: #ffffff !important;
 }

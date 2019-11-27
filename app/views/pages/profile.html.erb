@@ -1,10 +1,10 @@
 <div class="container">
-  <%= "User Profile" %>
+  <h3><%= "User Profile" %></h3>
   <div class="UserName"> <h3><%=  current_user.first_name%></h3></div>
     <% if current_user.avatar %>
-    <%= image_tag current_user.avatar, height: 150, width: 150, crop: :fill %>
+    <%= image_tag current_user.avatar, height: 70, width: 70, crop: :fill %>
     <% else %>
-    <%= image_tag ("default.png"), height: 150, width: 150, crop: :fill %>
+    <%= image_tag ("default.png"), height: 70, width: 70, crop: :fill %>
     <% end %> <br>
 
 
