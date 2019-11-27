@@ -8,9 +8,10 @@ class MissionsController < ApplicationController
   end
 
   def create
-    @misson = Mission.new(params[:mission])
+    @mission = Mission.new(mission_params)
     @mission.creator = current_user
     @mission.save
+    redirect_to missions_path
   end
 
   def update
