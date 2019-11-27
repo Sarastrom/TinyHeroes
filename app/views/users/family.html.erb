@@ -1,14 +1,15 @@
 <div class="container">
-  <div class="task-card">
-    <% @missions.each do |mission| %>
-      <h5><%= mission.icon %></h5>
-      <h5><%= mission.name %></h5>
-      <p><%= mission.description %></p>
-      <p><%= mission.reward %></p>
-      <p><%= mission.completed %></p>
-      <hr>
-    <% end %>
-  </div>
+  <h1>Your Family</h1>
+  <% @childrens.each do |user| %>
+    <div class="card">
+      <%= user.first_name %>
+       <%= user.last_name %>
+      <%= user.email %>
+      <%= user.reward_amount %>
+    </div>
+  <% end  %>
+
+
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> + </button>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -40,5 +41,4 @@
   </div>
 </div>
 </div>
-   <%= link_to "Back", :back %>
-</div>
+

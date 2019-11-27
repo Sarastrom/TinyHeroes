@@ -1,6 +1,6 @@
 class MissionsController < ApplicationController
   def index
-    @missions = Mission.all
+    @missions = Mission.where(creator: current_user).or(Mission.where(user: current_user))
   end
 
   def new
