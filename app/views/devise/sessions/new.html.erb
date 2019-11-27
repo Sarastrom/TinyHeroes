@@ -1,5 +1,8 @@
-<h2>Log in</h2>
+<div id="login-wallpaper">
 
+<%= image_tag "logo", class:"login-logo" %>
+
+<div class="login-form">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -16,5 +19,7 @@
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
+</div>

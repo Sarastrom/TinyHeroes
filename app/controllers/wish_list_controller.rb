@@ -1,6 +1,11 @@
 class WishListController < ApplicationController
   def index
-    @wish_lists = WishList.all
+    if params[:query].present?
+      sql_query = "wish_lists.title ILIKE :query"
+      @wish_lists = WishList.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @wish_lists = WishList.all
+    end
   end
 
   def new
@@ -29,6 +34,6 @@ class WishListController < ApplicationController
   private
 
   def wish_list_params
-    params.require(:WishList).permit(:image, :title, :amount)
+    params.require(:WishList).permit(:title, :amount, :photo)
   end
 end

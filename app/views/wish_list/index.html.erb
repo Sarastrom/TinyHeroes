@@ -1,4 +1,24 @@
 <div class="container">
   <%= "wish list" %>
+  <%= form_tag wish_list_index_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search"%>
+    <% end %>
+
+    <br>
+
+  <div class="all_wishes">
+    <div class="wish_list_cards">
+      <% @wish_lists.each do |wl| %>
+      <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
+      <p><%= wl.title %></pe>
+      </%></p>
+      <p><%= wl.amount %></p>
+      <% end %>
+    </div>
+  </div>
+
    <%= link_to "Back", :back %>
 </div>

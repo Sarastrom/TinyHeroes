@@ -1,0 +1,13 @@
+#login-wallpaper {
+  background-image: url("login1.jpg");
+  height: calc(100vh - 60px);
+  background-size: cover;
+}
+
+.login-logo {
+  height: 30vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
