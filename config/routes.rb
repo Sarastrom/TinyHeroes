@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   resources :missions, only: [:new, :create, :index, :destroy, :update, :edit] do |variable|
   get 'profile', to: 'pages#profile'
   end
-  resources :wish_list, only: [:new, :create, :destroy, :update, :edit]
+  resources :wish_list, only: [:new, :create, :destroy, :update, :edit, :index]
 
-    get 'profile', to: 'pages#profile'
-    get 'users/:id/wish_list', to: 'wish_list#index', as: "user_wish_list"
+  get 'users/:id/wish_list', to: 'wish_list#index', as: "user_wish_list"
+
+  #need to add a way to nest so we can get the children on the page
+  get 'users/family', to: 'users#family'
+  get 'profile', to: 'pages#profile'
 
 end
