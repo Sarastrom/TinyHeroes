@@ -1,13 +1,26 @@
 #login-wallpaper {
-  background-image: url("login1.jpg");
+  background-color: #54d05261;
   height: calc(100vh - 60px);
   background-size: cover;
 }
 
-.login-logo {
-  height: 30vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.login-form {
+border-radius: 5px;
+background-color: #58B873;
+h3 {
+    color: white;
+    text-align: center;
+  }
+}
+
+.form-actions {
+  color: #fff;
+  font-weight: bold;
+  background-color: #F6C953;
+  border-radius:5px;
+  border-color: #F6C953;
+}
+
+a {
+  color: white;
 }

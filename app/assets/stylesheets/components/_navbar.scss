@@ -1,8 +1,22 @@
+.navbar {
+  color: white!important;
+  font-family: Impact;
+  font-weight: bold;
+  align-items: center;
+  height: 72px;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
 .navbar-lewagon {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #5081F6;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,5 +24,43 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 76px;
+  width: 55px;
+  margin-left: -6px;
+  margin-top: -7px;
 }
+
+.menu-icon {
+  color: white;
+}
+
+.nav-item {
+  a {
+    color: white;
+  }
+}
+
+.dropdown-item {
+  text-align: right;
+  padding-right: 11px;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 24px;
+  margin-bottom: 4px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.header {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+

@@ -1,10 +1,10 @@
 .login-form {
-  background-color: lightblue;
   width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+  margin-top: -67px;
 }
 
 .signup-form {
@@ -13,6 +13,17 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-
+  margin-top: -22px;
 }
+
+#login-wallpaper {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  }
+
+#signup-wallpaper {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  }

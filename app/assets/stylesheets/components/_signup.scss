@@ -1,11 +1,11 @@
 #signup-wallpaper {
-  background-image: url("signup.jpg");
+  background-color: #54d05261;
   height: calc(100vh - 60px);
   background-size: cover;
 }
 
-#signup-button {
-  width: 90%;
+.form-actions {
+  width: 27%;
 }
 
 .signup-form {

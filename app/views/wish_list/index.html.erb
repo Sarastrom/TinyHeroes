@@ -1,5 +1,6 @@
+<% content_for(:navbar_text) { "WISH LIST" } %>
 <div class="container">
-  <h3><%= "Wish list" %></h3>
+
   <%= form_tag wish_list_index_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],

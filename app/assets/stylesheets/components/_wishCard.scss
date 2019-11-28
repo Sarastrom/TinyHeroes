@@ -8,6 +8,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   margin-top: 24px;
+  a {
+  color: #0B3BAE!important
+  }
 }
 
 
@@ -24,9 +27,7 @@ h3 {
   border-radius: 5px;
 }
 
-a {
-  color: #0B3BAE;
-}
+
 
 .wish-card h2 {
   color: #0B3BAE;
