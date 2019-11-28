@@ -11,7 +11,7 @@ h3 {
 }
 
 
-.wish_list_cards {
+.wish-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,4 +26,31 @@ h3 {
 
 a {
   color: #0B3BAE;
+}
+
+.wish-card h2 {
+  color: #0B3BAE;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.wish-card-button {
+  display: flex;
+  h6 {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.wish-card-info {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.wish-card-info h3 {
+  font-size: 10px;
+  font-weight: bold;
+  color: #F48779;
+  margin-bottom: 0px;
 }
