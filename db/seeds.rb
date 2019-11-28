@@ -50,19 +50,12 @@ wish5.photo.attach(io: file, filename: 'iphone.jpg', content_type: 'image/jpg')
 wish5.save!
 
 wish6 = WishList.new(title: "The Sims", amount:"50 Coins", user: kid2)
-
-file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
-wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
-wish6.save!
-
-wish7 = WishList.new(title: "play fifa for 2 h", amount:"30 Coins", user: kid2)
-
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
 wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
 wish6.save!
 
 wish7 = WishList.new(title: "play fifa for 2 h", amount:"30 Coins", user: kid2)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574937713/Screenshot_2019-11-28_at_10.40.57_am_fhkxvv.png')
-wish6.photo.attach(io: file, filename: 'default.jpg', content_type: 'image/jpg')
-wish6.save!
+wish7.photo.attach(io: file, filename: 'default.jpg', content_type: 'image/jpg')
+wish7.save!
 puts "Done!"
