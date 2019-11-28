@@ -8,7 +8,10 @@
         <div class="task-card">
 
           <div class="task-icon">
-            <i class="fas fa-utensils"></i>
+            <% if mission.icon %>
+            <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
+
+            <% end %> <br>
           </div>
 
           <div class="task-card-info">
@@ -43,8 +46,19 @@
           <%= f.input :description, label:'Useful tips', placeholder: 'Wash the whites (program: cottons at 60 C)', input_html: { maxlength: 91 }%>
           <%= f.input :reward, required: true, placeholder: '20', input_html: { required: true }, hint: 'The average reward is 20 coins/task ≈ 50p'%>
           <%= f.input :user_id, label:'Assign to', as: :radio_buttons, collection: [['Bobby'], ['Marta']]%>
+          <div class="mission-group">
+            <label class="control-label radio optional">icon</label>
+            <input type="hidden" name="mission[icon]" value="">
+            <% Mission::MISSION_ICON.each do |icon| %>
+            <input type="radio" class="d-none" value="<%= icon %>" name="mission[icon]" id="mission_icon_<%= icon %>">
+            <label for="mission_icon_<%= icon %>">
+              <%= image_tag icon, style: "height: 50px;" %>
+            </label>
+          <% end %>
+        </div>
+      </div>
           <%= f.submit "Create", class: "btn btn-primary" %>
-        <% end  %>
+              <% end  %>
       </div>
 
       <!-- buttons for pop up, might need! -->
