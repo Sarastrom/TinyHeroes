@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
 
+  devise_scope :user do
+    post 'create_child', to: 'registrations#create_child', as: :create_child
+  end
   # get "/sign_up", to: "devise/registrations#new", as: "users_family_path" # custom path to sign_up/registration
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
