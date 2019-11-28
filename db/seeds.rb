@@ -22,12 +22,14 @@ Mission.create!(name:"Home Work", description:"Do your maths home work", reward:
 # creator: dad - this was in the create above
 
 puts "Create WL"
+
 wish1 = WishList.new(title: "Winter Disco Chalet Doll Houses", amount: "50 Coins", user: kid1)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574858232/Screenshot_2019-11-27_at_12.30.47_pm_oa6pgn.png')
 wish1.photo.attach(io: file, filename: 'winter.jpg', content_type: 'image/jpg')
 wish1.save!
 
 wish2 = WishList.new(title: "Marvel Spider-Man: Far From Home Titan Hero Series", amount:"50 Coins", user: kid2)
+
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574938820/Screenshot_2019-11-28_at_11.00.07_am_vx1klf.png')
 wish2.photo.attach(io: file, filename: 'Spider-Man.jpg', content_type: 'image/jpg')
 wish2.save!
@@ -48,6 +50,13 @@ wish5.photo.attach(io: file, filename: 'iphone.jpg', content_type: 'image/jpg')
 wish5.save!
 
 wish6 = WishList.new(title: "The Sims", amount:"50 Coins", user: kid2)
+
+file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
+wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
+wish6.save!
+
+wish7 = WishList.new(title: "play fifa for 2 h", amount:"30 Coins", user: kid2)
+
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
 wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
 wish6.save!

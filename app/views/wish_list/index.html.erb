@@ -1,5 +1,5 @@
 <div class="container">
-  <%= "wish list" %>
+  <h3><%= "Wish list" %></h3>
   <%= form_tag wish_list_index_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
@@ -18,7 +18,6 @@
       <p><%= wl.amount %></p>
       <% end %>
     </div>
+    <%= link_to "Back", :back %>
   </div>
-
-   <%= link_to "Back", :back %>
 </div>
