@@ -16,12 +16,9 @@ kid1 = User.create!(email: "kid1@aol.com", password: "2421321", avatar: nil, rew
 kid2 = User.create!(email: "kid2@aol.com", password: "5435123", avatar: nil, reward_amount: 550, first_name: "weeBetty", last_name: "Fleming", parent_id: dad.id, is_parent: false)
 
 puts "Create Missions"
-
 Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees) please add sofening", reward:"20 Coins", creator: dad)
 Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward:"15 Coins", creator: dad)
 Mission.create!(name:"Home Work", description:"Do your maths home work", reward:"30 Coins", creator: dad)
-
-
 # creator: dad - this was in the create above
 
 puts "Create WL"
@@ -32,7 +29,8 @@ wish1.photo.attach(io: file, filename: 'winter.jpg', content_type: 'image/jpg')
 wish1.save!
 
 wish2 = WishList.new(title: "Marvel Spider-Man: Far From Home Titan Hero Series", amount:"50 Coins", user: kid2)
-file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574862857/Screenshot_2019-11-27_at_1.53.24_pm_sqp4yc.png')
+
+file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574938820/Screenshot_2019-11-28_at_11.00.07_am_vx1klf.png')
 wish2.photo.attach(io: file, filename: 'Spider-Man.jpg', content_type: 'image/jpg')
 wish2.save!
 
@@ -52,13 +50,19 @@ wish5.photo.attach(io: file, filename: 'iphone.jpg', content_type: 'image/jpg')
 wish5.save!
 
 wish6 = WishList.new(title: "The Sims", amount:"50 Coins", user: kid2)
+
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
 wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
 wish6.save!
 
 wish7 = WishList.new(title: "play fifa for 2 h", amount:"30 Coins", user: kid2)
+
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
 wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
 wish6.save!
 
+wish7 = WishList.new(title: "play fifa for 2 h", amount:"30 Coins", user: kid2)
+file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574937713/Screenshot_2019-11-28_at_10.40.57_am_fhkxvv.png')
+wish6.photo.attach(io: file, filename: 'default.jpg', content_type: 'image/jpg')
+wish6.save!
 puts "Done!"
