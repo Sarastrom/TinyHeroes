@@ -10,14 +10,21 @@
     <br>
 
   <div class="all_wishes">
-    <div class="wish_list_cards">
-      <% @wish_lists.each do |wl| %>
-      <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
-      <p><%= wl.title %></pe>
-      </%></p>
-      <p><%= wl.amount %></p>
-      <% end %>
-    </div>
+    <% @wish_lists.each do |wl| %>
+
+      <div class="wish-card">
+        <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
+
+          <div class="wish-card-info">
+            <h2><%= wl.title %></h2>
+            <h3>Liked by <strong>Bobby</strong></h3>
+          </div>
+
+          <div class="wish-card-button">
+            <div class="coin"><h6><%= wl.amount %></h6></div>
+          </div>
+      </div>
+    <% end %>
     <%= link_to "Back", :back %>
   </div>
 </div>
