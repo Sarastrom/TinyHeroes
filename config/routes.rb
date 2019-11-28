@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   #need to add a way to nest so we can get the children on the page
   get 'users/family', to: 'users#family'
   get 'profile', to: 'pages#profile'
-
+  resources :likes, only: [ :new, :create ]
 end
