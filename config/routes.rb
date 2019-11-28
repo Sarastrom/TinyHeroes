@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
+
+  # get "/sign_up", to: "devise/registrations#new", as: "users_family_path" # custom path to sign_up/registration
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :missions, only: [:new, :create, :index, :destroy, :update, :edit] do |variable|
   get 'profile', to: 'pages#profile'
