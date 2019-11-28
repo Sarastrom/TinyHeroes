@@ -32,7 +32,7 @@ wish1.photo.attach(io: file, filename: 'winter.jpg', content_type: 'image/jpg')
 wish1.save!
 
 wish2 = WishList.new(title: "Marvel Spider-Man: Far From Home Titan Hero Series", amount:"50 Coins", user: kid2)
-file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574862857/Screenshot_2019-11-27_at_1.53.24_pm_sqp4yc.png')
+file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574938820/Screenshot_2019-11-28_at_11.00.07_am_vx1klf.png')
 wish2.photo.attach(io: file, filename: 'Spider-Man.jpg', content_type: 'image/jpg')
 wish2.save!
 
@@ -57,8 +57,8 @@ wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
 wish6.save!
 
 wish7 = WishList.new(title: "play fifa for 2 h", amount:"30 Coins", user: kid2)
-file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
-wish6.photo.attach(io: file, filename: 'sims.jpg', content_type: 'image/jpg')
-wish6.save!
+file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574937713/Screenshot_2019-11-28_at_10.40.57_am_fhkxvv.png')
+wish7.photo.attach(io: file, filename: 'default.jpg', content_type: 'image/jpg')
+wish7.save!
 
 puts "Done!"

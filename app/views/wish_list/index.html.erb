@@ -12,7 +12,7 @@
   <div class="all_wishes">
     <div class="wish_list_cards">
       <% @wish_lists.each do |wl| %>
-      <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
+      <%= cl_image_tag wl.photo.key, height: 100, width: 100, crop: :fill %>
       <p><%= wl.title %></pe>
       </%></p>
       <p><%= wl.amount %></p>
