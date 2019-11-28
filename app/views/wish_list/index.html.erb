@@ -18,7 +18,11 @@
 
           <div class="wish-card-info">
             <h2><%= wl.title %></h2>
-            <h3>Liked by <strong>Bobby</strong></h3>
+            <%= simple_form_for Like.new do |f| %>
+              <%= f.input :wish_list_id, :as => :hidden, :input_html => { :value => wl.id } %>
+              <%= f.submit %>
+            <% end %>
+            <%= wl.likes.count %>
           </div>
 
           <div class="wish-card-button">

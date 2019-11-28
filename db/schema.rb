@@ -1,4 +1,4 @@
-e2ws  a`a`§ § # This file is auto-generated from the current state of the database. Instead
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -10,7 +10,7 @@ e2ws  a`a`§ § # This file is auto-generated from the current state of the data
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_133734) do
+ActiveRecord::Schema.define(version: 2019_11_28_134730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2019_11_27_133734) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "wish_list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_likes_on_user_id"
+    t.index ["wish_list_id"], name: "index_likes_on_wish_list_id"
   end
 
   create_table "missions", force: :cascade do |t|
@@ -79,6 +88,8 @@ ActiveRecord::Schema.define(version: 2019_11_27_133734) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "likes", "users"
+  add_foreign_key "likes", "wish_lists"
   add_foreign_key "missions", "users"
   add_foreign_key "missions", "users", column: "creator_id"
   add_foreign_key "wish_lists", "users"
