@@ -1,4 +1,5 @@
 <div class="container">
+  <% if @user == current_user %>
   <div class="task-cards">
     <div class="button-card" data-toggle="modal" data-target="#new-mission-modal">
       <i class="fas fa-plus" ></i>
@@ -13,7 +14,6 @@
           <div class="task-card-info">
             <h2><%= mission.name %></h2>
             <p><%= mission.description %></p>
-            <h3>Bobby</h3>
           </div>
 
           <div class="task-card-button">
@@ -24,6 +24,9 @@
         </div>
       <% end %>
   </div>
+  <% end %>
+
+
 
 <div class="modal fade" id="new-mission-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
