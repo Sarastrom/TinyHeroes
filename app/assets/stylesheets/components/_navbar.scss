@@ -8,6 +8,7 @@
 .navbar-brand {
   margin-right: 0;
 }
+
 .navbar-lewagon {
   display: flex;
   align-items: center;
@@ -29,6 +30,8 @@
   color: white;
 }
 .nav-item {
+  width: 120px;
+  margin: 0 0 0 auto;
   a {
     color: white;
   }
@@ -36,6 +39,8 @@
 .dropdown-item {
   text-align: right;
   padding-right: 11px;
+  background-color: #0B3BAE;
+  margin-right: 0;
 }
 .navbar-light .navbar-toggler {
   border: none;

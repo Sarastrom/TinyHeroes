@@ -54,7 +54,7 @@ p {
   display: flex;
   h6 {
     font-size: 10px;
-    margin-bottom: 0;
+    margin-bottom: 0!important;
   }
 }
 
@@ -63,28 +63,6 @@ p {
   font-size: 38px;
   position: relative;
   padding:5px;
-}
-
-.modal-content {
-background-color: #58B873;
-border-radius: 10px;
-}
-
-.modal-header {
-  border-bottom: none;
-  margin: 0 auto;
-  background-color: #58B873;
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  align-items: center;
-  color: white;
-  h3 {
-  font-weight: bold!important;
-  }
-}
-
-.form-group {
-  color: white;
 }
 
 .button-card {
@@ -109,26 +87,33 @@ border-radius: 10px;
   padding: 3px;
   color: white;
   border: 2px solid #EABA3D;
-  margin-right: 5px;
+  margin-right: 0px 5px 0px 0px;
 }
 
-.btn-primary {
-  color: #fff;
+.pending-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 24px;
+  h1 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #0B3BAE;
+  padding: 5px;
   font-weight: bold;
-  background-color: #F6C953;
-  border-radius:5px;
-  border-color: #F6C953;
-}
+  }
+  }
 
-.btn-primary:hover {
-  color: #fff;
-  background-color: #f7c026;
-  border-color: #f7c026;
-}
-.close {
-  color: white;
-}
-
-.text-muted {
-  color: #ffffff !important;
+.favourite-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 5px;
+  h1 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #0B3BAE;
+  padding: 5px;
+  font-weight: bold;
+  }
 }
