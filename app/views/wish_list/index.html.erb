@@ -1,23 +1,31 @@
+<% content_for(:navbar_text) { "WISH LIST" } %>
 <div class="container">
-  <h3><%= "Wish list" %></h3>
   <%= form_tag wish_list_index_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Search"%>
+      placeholder: "Search for you childs name"%>
     <% end %>
+
+    <div class="button-card" data-toggle="modal" data-target="#new-wish-modal">
+      <i class="fas fa-plus" ></i>
+    </div>
 
     <br>
 
-  <div class="all_wishes">
-    <div class="wish_list_cards">
-      <% @wish_lists.each do |wl| %>
-      <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
-      <p><%= wl.title %></pe>
-      </%></p>
-      <p><%= wl.amount %></p>
-      <% end %>
-    </div>
+<div class="all_wishes">
+    <% @wish_lists.each do |wl| %>
+      <div class="wish-card">
+        <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
+          <div class="wish-card-info">
+            <h2><%= wl.title %></h2>
+            <h3>Liked by <strong>Bobby</strong></h3>
+          </div>
+          <div class="wish-card-button">
+            <div class="coin"><h6><%= wl.amount %></h6></div>
+          </div>
+      </div>
+    <% end %>
     <%= link_to "Back", :back %>
   </div>
 </div>
