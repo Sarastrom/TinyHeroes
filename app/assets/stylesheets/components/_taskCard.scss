@@ -76,18 +76,28 @@ p {
   background: #F48779;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: -8px;
   border-radius: 5px;
   position: relative;
 }
 
 .coin {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background-color: #F6C953;
-  padding: 3px;
   color: white;
   border: 2px solid #EABA3D;
   margin-right: 0px 5px 0px 0px;
+  h6 {
+    font-size: 10px;
+    margin: 0 !important;
+    text-align: center;
+    transform: translate(0px, -1px);
+  }
 }
 
 .pending-tasks {
@@ -101,6 +111,7 @@ p {
   color: #0B3BAE;
   padding: 5px;
   font-weight: bold;
+  margin-bottom: 10px;
   }
   }
 
