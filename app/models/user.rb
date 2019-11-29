@@ -13,5 +13,5 @@ class User < ApplicationRecord
     User.where(parent: self)
   end
 
-  AVATAR_NAMES = ["giraffe", "lion", "monkey", "snake", "tiger"]
+  AVATAR_NAMES = ["giraffe.png", "lion.png", "monkey.png", "snake.png", "tiger.png"]
 end
