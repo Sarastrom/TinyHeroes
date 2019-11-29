@@ -13,13 +13,23 @@
 
     <br>
 
-<div class="all_wishes">
+  <div class="all_wishes">
     <% @wish_lists.each do |wl| %>
       <div class="wish-card">
         <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
           <div class="wish-card-info">
             <h2><%= wl.title %></h2>
-            <h3>Liked by <strong>Bobby</strong></h3>
+            <% if current_user.parent.nil? %>
+              <h3><%= wl.children_who_liked %></h3>
+              <%= wl.likes.count %>
+            <% else %>
+              <%= simple_form_for(Like.new) do |f| %>
+                <%= f.input :wish_list_id, :as => :hidden, :input_html => { :value => wl.id } %>
+                <%= f.submit %>
+              <% end %>
+              <%= wl.likes.count %>
+
+            <% end %>
           </div>
           <div class="wish-card-button">
             <div class="coin"><h6><%= wl.amount %></h6></div>

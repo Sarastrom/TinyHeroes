@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :missions
   has_many :created_missions, class_name: :Mission, foreign_key: :creator_id
+  has_many :likes
   belongs_to :parent, class_name: "User", foreign_key: :parent_id, optional: true
 
   def kids
