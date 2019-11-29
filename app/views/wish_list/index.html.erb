@@ -16,7 +16,7 @@
   <div class="all_wishes">
     <% @wish_lists.each do |wl| %>
       <div class="wish-card">
-        <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>
+        <%= cl_image_tag wl.image.key, height: 50, width: 50, crop: :fill%>
           <div class="wish-card-info">
             <h2><%= wl.title %></h2>
             <% if current_user.parent.nil? %>
