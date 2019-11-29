@@ -10,8 +10,11 @@ class MissionsController < ApplicationController
   def create
     @mission = Mission.new(mission_params)
     @mission.creator = current_user
-    @mission.save
-    redirect_to missions_path
+    if @mission.save
+      redirect_to missions_path
+    else
+      redirect_to missions_path, notice: @mission.errors.full_messages.join(', ')
+    end
   end
 
   def update
