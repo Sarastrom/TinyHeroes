@@ -1,20 +1,6 @@
 <div class="navbar-title"><h4><% content_for(:navbar_text) { "MISSIONS" } %></h4></div>
 
 <div class="container">
-  <div class="navbar-title"></div>
-
-    <div class="task-cards">
-      <div class="button-card" data-toggle="modal" data-target="#new-mission-modal">
-        <i class="fas fa-plus" ></i>
-      </div>
-      <div class="pending-tasks"><h1>Pending missions</h1>
-        <% @missions.each do |mission| %>
-          <div class="task-card">
-
-            <div class="task-icon">
-              <i class="fas fa-utensils"></i>
-            </div>
-  <% if @user == current_user %>
   <div class="task-cards">
     <div class="button-card" data-toggle="modal" data-target="#new-mission-modal">
       <i class="fas fa-plus" ></i>
@@ -45,7 +31,6 @@
     </div>
     <div class="favourite-tasks"><h1>Favourites</h1></div>
   </div>
-  <% end %>
 
 
 
