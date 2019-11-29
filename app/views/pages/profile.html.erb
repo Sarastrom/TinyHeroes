@@ -32,7 +32,6 @@
     </div>
     <div>
       <%= link_to 'Edit Profile', edit_user_registration_path, class:"EditProfile"%> <br>
-      <%= link_to 'Wish List', wish_list_index_path(current_user), class:"WishList"%>
     </div>
   </div>
   <div class="tab-pane fade" id="missions" role="tabpanel" aria-labelledby="missions-tab">
@@ -40,5 +39,5 @@
     <%= mission.name %>
     <% end %>
   </div>
-  <%= link_to "Back", :back %>
+  <%= link_to "Back", missions_path %>
 </div>
