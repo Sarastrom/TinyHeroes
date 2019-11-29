@@ -3,11 +3,11 @@
   <%= form_tag wish_list_index_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "wish-form-control",
       placeholder: "Search for you childs name"%>
     <% end %>
 
-    <div class="button-card" data-toggle="modal" data-target="#new-wish-modal">
+    <div class="new-wish-card" data-toggle="modal" data-target="#new-wish-modal">
       <i class="fas fa-plus" ></i>
     </div>
 
