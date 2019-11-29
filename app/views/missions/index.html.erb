@@ -5,28 +5,35 @@
         <div class="button-card" data-toggle="modal" data-target="#new-mission-modal">
           <i class="fas fa-plus" ></i>
         </div>
-        <div class="pending-tasks"><h1>Pending missions</h1>
-          <% @missions.each do |mission| %>
-            <div class="task-card">
-              <div class="task-icon">
-                <% if mission.icon %>
-                  <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
-                <% end %>
+        <div class="pending-tasks">
+          <% if @missions.any? %>
+          <h1>Pending missions</h1>
+            <% @missions.each do |mission| %>
+              <div class="task-card">
+                <div class="task-icon">
+                  <% if mission.icon %>
+                    <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
+                  <% end %>
+                </div>
+                <div class="task-card-info">
+                  <h2><%= mission.name %></h2>
+                  <p><%= mission.description %></p>
+                  <h3>Bobby</h3>
+                </div>
+                <div class="task-card-button">
+                  <div class="coin"><h6><%= mission.reward %></h6></div>
+                  <p><%= mission.completed %></p>
+                </div>
               </div>
-              <div class="task-card-info">
-                <h2><%= mission.name %></h2>
-                <p><%= mission.description %></p>
-                <h3>Bobby</h3>
-              </div>
-              <div class="task-card-button">
-                <div class="coin"><h6><%= mission.reward %></h6></div>
-                <p><%= mission.completed %></p>
-              </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>
-      <div class="favourite-tasks"><h1>Favourites</h1></div>
+      <div class="favourite-tasks">
+        <% if @favourites.any? %>
+          <h1>Favourites</h1>
+        <% end %>
+      </div>
     </div>
     <div class="modal fade" id="new-mission-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
