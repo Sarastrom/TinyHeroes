@@ -3,8 +3,6 @@
   <div class="UserName"> <h3><%=  current_user.first_name.capitalize %></h3>
     <% if current_user.avatar %>
     <%= image_tag current_user.avatar, height: 70, width: 70, crop: :fill %>
-    <% else %>
-    <%= image_tag ("default.png"), height: 70, width: 70, crop: :fill %>
     <% end %>
   </div>
 <hr>
@@ -42,4 +40,5 @@
     <%= mission.name %>
     <% end %>
   </div>
+  <%= link_to "Back", :back %>
 </div>
