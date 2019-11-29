@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
    devise_scope :user do
     post 'create_child', to: 'registrations#create_child', as: :create_child
   end
