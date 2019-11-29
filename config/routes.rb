@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+   devise_scope :user do
+    post 'create_child', to: 'registrations#create_child', as: :create_child
+  end
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :missions, only: [:new, :create, :index, :destroy, :update, :edit] do |variable|
