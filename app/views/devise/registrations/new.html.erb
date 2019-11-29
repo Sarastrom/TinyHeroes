@@ -1,9 +1,9 @@
+<% content_for(:navbar_text) { "SIGN UP" } %>
 <div id="signup-wallpaper">
 
 
 <div class="signup-form">
-  <h3>Sign up</h3>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
