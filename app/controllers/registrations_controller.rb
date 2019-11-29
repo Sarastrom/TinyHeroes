@@ -17,10 +17,6 @@ class RegistrationsController < Devise::RegistrationsController
     users_family_path
   end
 
-  def after_sign_in_path_for(resource)
-    missions_path
-  end
-
   def create_child_params
     params.permit(:first_name, :email, :password)
   end
