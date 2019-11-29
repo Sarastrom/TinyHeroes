@@ -1,19 +1,44 @@
 <div class="container">
-  <h3><%= "User Profile" %></h3>
-  <div class="UserName"> <h3><%=  current_user.first_name%></h3></div>
+  <div class="UserName"> <h3><%=  current_user.first_name.capitalize %></h3>
     <% if current_user.avatar %>
     <%= image_tag current_user.avatar, height: 70, width: 70, crop: :fill %>
     <% else %>
     <%= image_tag ("default.png"), height: 70, width: 70, crop: :fill %>
-    <% end %> <br>
-
-
- <h6>Missions</h6>
-    <% current_user.missions.where(completed: false).each do |mission| %>
     <% end %>
   </div>
-    <%= link_to 'Edit Profile', edit_user_registration_path, class:"EditProfile"%> <br>
-    <%= link_to 'Dashboard', missions_path, class:"Dashboard"%> <br>
-    <%= link_to 'Wish List', wish_list_index_path(current_user), class:"WishList"%>
+<hr>
+
+<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="missons-tab" data-toggle="tab" href="#missions" role="tab" aria-controls="missions" aria-selected="false">Missions</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+    <div class="container">
+      <div class="d-flex bd-highlight">
+        <div class="p-2 flex-shrink-1 bd-highlight">
+          <%= image_tag ("email.png"), height: 30, width: 30 %>
+        </div>
+        <div class="p-2 w-100 bd-highlight">
+          <%= current_user.email %>
+        </div>
+      </div>
+      <div>
+        <%= current_user.reward_amount %>
+      </div>
+    </div>
+    <div>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class:"EditProfile"%> <br>
+      <%= link_to 'Wish List', wish_list_index_path(current_user), class:"WishList"%>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="missions" role="tabpanel" aria-labelledby="missions-tab">
+    <% current_user.created_missions.each do |mission| %>
+    <%= mission.name %>
+    <% end %>
   </div>
 </div>
