@@ -2,7 +2,7 @@ class WishList < ApplicationRecord
   belongs_to :user
   scope :starts_with, ->(name) { where("name like ?", "#{name}%") }
   has_one_attached :photo
-  has_many :likes
+  has_many :likes, dependent: :destroy
 
   def children_who_liked
     list = likes.map do |like|

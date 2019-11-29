@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :missions
+  has_many :missions, dependent: :destroy
   has_many :created_missions, class_name: :Mission, foreign_key: :creator_id
-  has_many :likes
+  has_many :likes, dependent: :destroy
   belongs_to :parent, class_name: "User", foreign_key: :parent_id, optional: true
 
   def kids
