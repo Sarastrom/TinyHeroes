@@ -1,6 +1,5 @@
+<% content_for(:navbar_text) { "LOG IN" } %>
 <div id="login-wallpaper">
-
-  <%= image_tag "logo", class:"login-logo" %>
 
   <div class="login-form">
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

@@ -1,5 +1,5 @@
 #login-wallpaper {
-  background-image: url("login1.jpg");
+  background-color: #8778da42;
   height: calc(100vh - 60px);
   background-size: cover;
 }
@@ -10,4 +10,21 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+
+#login-button {
+  width: 90%;
+}
+
+.btn {
+  color: #fff;
+  font-weight: bold;
+  background-color: #F6C953;
+  border-radius:5px;
+  border-color: #F6C953;
+}
+
+a {
+  color: white;
 }
