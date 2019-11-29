@@ -4,12 +4,13 @@ class RegistrationsController < Devise::RegistrationsController
   #   @user = User.new
   # end
 
-  def create_child
-    @user = User.new(create_child_params)
-    @user.parent = current_user
-    binding.pry
-    @user.save
-  end
+  # def create_child
+  #   @user = User.new(create_child_params)
+  #   @user.parent = current_user
+  #   @user.save
+  #   raise
+  #   redirect_to users_family_path
+  # end
 
   protected
 
