@@ -11,8 +11,6 @@ Rails.application.routes.draw do
   resources :missions, only: [:new, :create, :index, :destroy, :update, :edit] do
     member do
       post 'mark_complete', to: 'missions#mark_as_completed', as: :mark_complete
-    end
-    member do
       post 'mark_verify', to: 'missions#mark_as_verified', as: :mark_verify
     end
   end
