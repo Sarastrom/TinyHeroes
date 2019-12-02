@@ -1,4 +1,4 @@
-<div class="navbar-title"><h4><% content_for(:navbar_text) { "MISSIONS" } %></h4></div>
+<div class="navbar-title"><h4 id="mismis"><% content_for(:navbar_text) { "MISSIONS" } %></h4></div>
   <div class="container">
     <div class="navbar-title"></div>
       <div class="task-cards">
@@ -61,7 +61,7 @@
                 <% Mission::MISSION_ICON.each do |icon| %>
                   <input type="radio" class="d-none" value="<%= icon %>" name="mission[icon]" id="mission_icon_<%= icon %>">
                   <label for="mission_icon_<%= icon %>">
-                    <%= image_tag icon, style: "height: 50px;" %>
+                    <%= image_tag icon, style: "height: 50px;", class: "icon" %>
                   </label>
                 <% end %>
               </div>
