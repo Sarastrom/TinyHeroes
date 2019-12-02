@@ -3,6 +3,13 @@
   <h1 id="famfam">Your Family</h1>
 
   <% @childrens.each do |user| %>
+    <div class="card">
+      <%= user.first_name %>
+      <%= user.last_name %>
+      <%= user.email %>
+      <%= user.reward_amount %>
+    </div>
+
       <div class="family-card">
       <div style="width:80px;"><img src="https://image.flaticon.com/icons/svg/477/477199.svg"></div>
       <p><%= user.first_name %></p>
