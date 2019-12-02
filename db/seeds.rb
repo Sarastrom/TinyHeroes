@@ -45,10 +45,10 @@ file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863852/S
 wish4.photo.attach(io: file, filename: 'harry-potter.png', content_type: 'image/png')
 wish4.save!
 
-wish5 = WishList.new(title: "iPhone 11", amount: 50, user: kid1)
-file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575039963/Screenshot_2019-11-29_at_3.05.47_pm_r0iyaf.png')
-wish5.photo.attach(io: file, filename: 'iphone.png', content_type: 'image/png')
-wish5.save!
+# wish5 = WishList.new(title: "iPhone 11", amount: 50, user: kid1)
+# file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575039963/Screenshot_2019-11-29_at_3.05.47_pm_r0iyaf.png')
+# wish5.photo.attach(io: file, filename: 'iphone.png', content_type: 'image/png')
+# wish5.save!
 
 wish6 = WishList.new(title: "The Sims", amount: 50, user: kid1)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')

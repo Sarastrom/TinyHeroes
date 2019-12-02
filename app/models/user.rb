@@ -15,9 +15,13 @@ class User < ApplicationRecord
   end
 
   def receive_reward(amount)
-    self.reward_amount += amount
+    if self.reward_amount.present?
+      self.reward_amount += amount
+    else
+      self.reward_amount = amount
+    end
     self.save
   end
-  
+
   AVATAR_NAMES = ["003-dinosaur.png", "034-chimera.png", "035-elf.png", "narwhal.png", "wizard.png", "valkyrie.png", "unicorn.png", "robot.png", "pirate.png", "pegasus.png", "hydra.png", "043-frankenstein.png", "ghost.png", "008-mushroom.png", "028-mermaid.png"]
 end
