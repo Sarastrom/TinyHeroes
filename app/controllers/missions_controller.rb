@@ -35,7 +35,12 @@ class MissionsController < ApplicationController
   def mark_as_completed
     @mission = Mission.find(params[:id])
     @mission.mark_completed
+    redirect_to missions_path
+  end
 
+  def mark_as_verified
+    @mission = Mission.find(params[:id])
+    @mission.mark_verified
     @mission.user.receive_reward(@mission.reward)
     redirect_to missions_path, notice: "You just earned #{@mission.reward} coins"
   end

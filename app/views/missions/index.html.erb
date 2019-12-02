@@ -24,6 +24,9 @@
                   <% if mission.user && mission.user == current_user && !mission.completed    %>
                     <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
                   <% end %>
+                  <% if mission.user && mission.user.parent == current_user && mission.completed? %>
+                    <%= link_to 'verify', mark_verify_mission_path(mission), method: :post %>
+                  <% end %>
                 </div>
                 <div class="task-card-button">
                   <div class="coin"><h6><%= mission.reward %></h6></div>
