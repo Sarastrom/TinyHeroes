@@ -1,6 +1,6 @@
 class MissionsController < ApplicationController
   def index
-    @missions = Mission.where(creator: current_user).or(Mission.where(user: current_user)).where(completed: true)
+    @missions = Mission.where(creator: current_user).where(completed: false)#.or(Mission.where(user: current_user)).where(completed: true)
     @not_completed_missions = Mission.where(creator: current_user).or(Mission.where(user: current_user)).where(completed: false)
     @favourites = []
   end
@@ -11,6 +11,7 @@ class MissionsController < ApplicationController
 
   def create
     @mission = Mission.new(mission_params)
+    @mission.completed = false
     @mission.creator = current_user
     if @mission.save
       redirect_to missions_path
