@@ -1,6 +1,7 @@
 <% content_for(:navbar_text) { "FAMILY" } %>
 <div class="container">
-  <h1>Your Family</h1>
+  <h1 id="famfam">Your Family</h1>
+
   <% @childrens.each do |user| %>
     <div class="card">
       <%= user.first_name %>
@@ -8,6 +9,19 @@
       <%= user.email %>
       <%= user.reward_amount %>
     </div>
+
+      <div class="family-card">
+      <div style="width:80px;"><img src="https://image.flaticon.com/icons/svg/477/477199.svg"></div>
+      <p><%= user.first_name %></p>
+
+<% if user.reward_amount == 0 %>
+      <div class="reward-low">15</div>
+      <% elsif user.reward_amount == 100 %>
+      <div class="reward-medium">100</div>
+      <% else %>
+      <div class="reward-high">200</div>
+<% end %>
+      </div>
   <% end  %>
 
 
@@ -27,6 +41,18 @@
           <%= f.input :first_name %>
           <%= f.input :email %>
           <%= f.input :password %>
+      <div class="form-group">
+        <label class="control-label radio optional">Avatar</label>
+        <input type="hidden" name="user[avatar]" value="">
+        <div class="avatar-choices">
+          <% User::AVATAR_NAMES.each do |avatar| %>
+            <input type="radio" class="d-none" value="<%= avatar %>" name="user[avatar]" id="user_avatar_<%= avatar %>">
+            <label for="user_avatar_<%= avatar %>">
+              <%= image_tag avatar, style: "height: 50px;", class:"avatar" %>
+            </label>
+          <% end %>
+        </div>
+      </div>
           <%= f.submit %>
         <% end %>
       </div>
