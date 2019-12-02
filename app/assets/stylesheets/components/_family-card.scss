@@ -1,3 +1,20 @@
+.new-family-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 32px;
+  height: 80px;
+  width: 340px;
+  background: #F6C953;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-bottom: -8px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 27px;
+}
+
 .family-card {
   display:flex;
   padding:10px 0;
@@ -6,13 +23,11 @@
   margin:5px 0;
   justify-content: space-between;
   align-items:center;
-
-}
-
-p {
-  font-size:25px!important;
+  p {
+  font-size:25px;
   display:flex;
   font-family: 'Solway', serif;
+  }
 }
 
 .reward-amount {
