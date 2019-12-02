@@ -1,7 +1,12 @@
+.button-position {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 .new-family-button {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   color: white;
   font-size: 32px;
   height: 80px;
@@ -9,58 +14,38 @@
   background: #F6C953;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
-  margin-bottom: -8px;
-  border-radius: 5px;
-  position: relative;
   margin-top: 27px;
 }
 
 .family-card {
   display:flex;
+    justify-content:space-around;
+align-items:center;
   padding:10px 0;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
   margin:5px 0;
-  justify-content: space-between;
-  align-items:center;
-  p {
-  font-size:25px;
-  display:flex;
+    p {
+  font-size:20px;
   font-family: 'Solway', serif;
   }
 }
 
-
-.reward-low {
-  background-color: green;
-  border: 2px solid white;
-  height:10px;
-  width:80%;
-  display:flex;
-  justify-content:center;
+.gold-coins {
+  background-color:gold;
+  border-radius: 50%;
+  border: 1px solid white;
+  width:50px;
+  height:50px;
+  display: flex;
   align-items:center;
-  color:black;
+  justify-content:center;
 }
 
-.reward-medium {
-  background-color: pink;
-  border: 2px solid white;
-  height:10px;
-  width:80%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:black;
-}
+// .progress-status {
+//   display:flex;
+//   justify-content:center;
+//   flex-flow: row wrap;
+//   opacity: 0.5;
 
-
-.reward-high {
-  background-color: gold;
-  border: 2px solid white;
-  height:10px;
-  width:80%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:black;
-}
+// }
