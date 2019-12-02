@@ -19,22 +19,30 @@ class MissionsController < ApplicationController
   end
 
   def update
-    @misson = Mission.find(params[:id])
+    @mission = Mission.find(params[:id])
     @mission.update(params[:mission])
   end
 
   def edit
-    @misson = Mission.find(params[:id])
+    @mission = Mission.find(params[:id])
   end
 
   def delete
-    @misson = Mission.find(params[:id])
-    @misson.destroy
+    @mission = Mission.find(params[:id])
+    @mission.destroy
+  end
+
+  def mark_as_completed
+    @mission = Mission.find(params[:id])
+    @mission.mark_completed
+
+    @mission.user.receive_reward(@mission.reward)
+    redirect_to missions_path, notice: "You just earned #{@mission.reward} coins"
   end
 
   private
 
   def mission_params
-    params.require(:mission).permit(:completed, :name, :description, :reward, :icon)
+    params.require(:mission).permit(:completed, :name, :description, :reward, :icon, :user_id)
   end
 end

@@ -18,7 +18,12 @@
                 <div class="task-card-info">
                   <h2><%= mission.name %></h2>
                   <p><%= mission.description %></p>
-                  <h3>Bobby</h3>
+                  <% if mission.user && mission.user != current_user %>
+                  <h3> <%= mission.user.first_name %></h3>
+                  <% end %>
+                  <% if mission.user && mission.user == current_user && !mission.completed    %>
+                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
+                  <% end %>
                 </div>
                 <div class="task-card-button">
                   <div class="coin"><h6><%= mission.reward %></h6></div>
@@ -49,7 +54,7 @@
               <%= f.input :name, required: true, label: 'Title', placeholder: 'Laundry' %>
               <%= f.input :description, label:'Useful tips', placeholder: 'Wash the whites (program: cottons at 60 C)', input_html: { maxlength: 91 }%>
               <%= f.input :reward, required: true, placeholder: '20', input_html: { required: true }, hint: 'The average reward is 20 coins/task ≈ 50p'%>
-              <%= f.input :user_id, label:'Assign to', as: :radio_buttons, collection: [['Bobby'], ['Marta']]%>
+              <%= f.input :user_id, label:'Assign to', as: :radio_buttons, collection: current_user.children, label_method: :first_name %>
               <div class="mission-group">
                 <label class="control-label radio optional"></label>
                 <input type="hidden" name="mission[icon]" value="">

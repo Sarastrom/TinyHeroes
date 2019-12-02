@@ -8,9 +8,17 @@ Rails.application.routes.draw do
   post 'create_child', to: "users#create_child", as: :create_child
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :missions, only: [:new, :create, :index, :destroy, :update, :edit] do |variable|
-  get 'profile', to: 'pages#profile'
+  resources :missions, only: [:new, :create, :index, :destroy, :update, :edit] do
+    member do
+      post 'mark_complete', to: 'missions#mark_as_completed', as: :mark_complete
+    end
+    member do
+      post 'mark_verify', to: 'missions#mark_as_verified', as: :mark_verify
+    end
   end
+  get 'profile', to: 'pages#profile'
+
+
   resources :likes, only: [ :new, :create ]
   resources :wish_list, only: [:new, :create, :destroy, :update, :edit, :index]
 
