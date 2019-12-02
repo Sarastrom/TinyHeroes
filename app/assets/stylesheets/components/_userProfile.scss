@@ -8,13 +8,14 @@
 
 .nav-tabs {
   text-align: center;
+  border-bottom: none;
 }
 
 .nav-tabs .nav-link.active {
   color: white;
   background-color: #0B3BAE;
   border-radius: 5px;
-
+  border-style: none;
 }
 
 .username {
@@ -29,9 +30,8 @@
   width: 50%;
 }
 
-
 #about-tab .nav-link.active{
-  color: white!important;
+  color: #0B3BAE;
 }
 
 .extras {
@@ -39,11 +39,10 @@
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid #0b3bae;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  color: #0b3bae;
-  background-color: white;
+  color: #0B3BAE;
+  background-color: #0a3bae29;
   border-radius: 5px;
 }
 
