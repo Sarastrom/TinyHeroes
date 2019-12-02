@@ -1,13 +1,14 @@
 class WishListController < ApplicationController
   def index
     if params[:query].present?
-      sql_query = "wish_lists.title ILIKE :query"
-      @wish_lists = WishList.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = " \
+        wish_lists.title ILIKE :query \
+        OR users.first_name ILIKE :query \ "
+      @wish_lists = WishList.joins(:users).where(sql_query, query: "%#{params[:query]}%")
     else
       @wish_lists = WishList.all
     end
   end
-
   def new
     @wish_list = WishList.new
   end
