@@ -1,28 +1,32 @@
 <% content_for(:navbar_text) { "MY FAMILY" } %>
 <div class="container">
-  
+
   <h1 id="famfam"></h1>
 
   <% @childrens.each do |user| %>
     <div class="family-card">
-      <div style="width:80px;"><img src="https://image.flaticon.com/icons/svg/477/477199.svg"></div>
+      <div style="width:70px;"><img src="https://image.flaticon.com/icons/svg/477/477199.svg"></div>
       <p><%= user.first_name %></p>
-      <% if user.reward_amount == 50 %>
-        <div class="reward-low"><%= user.reward_amount %></div>
-      <% elsif user.reward_amount == 100 %>
-        <div class="reward-medium"><%= user.reward_amount %></div>
-      <% else user.reward_amount == 150 %>
-        <div class="reward-high"><%= user.reward_amount %></div>
-      <% end %>
+      <div class="gold-coins"><%= user.reward_amount %></div>
       </div>
+  <!--     <div class="progress-status">
+      <% if user.reward_amount == 50 %>
+      <div class="d-flex justify-content-center align-items-center;" style="background-color: white; width:50px; border:1px solid black;">Progress: 20%</div>
+      <% elsif user.reward_amount == 100 %>
+      <div class="d-flex justify-content-center align-items-center;" style="background-color: green; width:100px; border:1px solid black;">Progress: 40%</div>
+      <% else user.reward_amount == 150 %>
+      <div class="d-flex justify-content-center align-items-center;" style="background-color: gold; width:150px; border:1px solid black;">Progress: 60%</div>
+      <% end %>
+      </div> -->
     </div>
   <% end  %>
 
 
 
-
+<div class="button-position">
 <div class="new-family-button" data-toggle="modal" data-target="#exampleModal">
   <i class="fas fa-plus" ></i>
+</div>
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
