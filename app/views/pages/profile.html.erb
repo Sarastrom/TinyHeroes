@@ -37,9 +37,11 @@
     <div class="mission-cards">
     <% current_user.created_missions.each do |mission| %>
       <div class="mission-card">
+              <% if mission.icon %>
                 <div class="mission-icon">
                     <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
                 </div>
+                <% end %>
 
                 <div class="mission-card-info">
                   <h2><%= mission.name %></h2>
