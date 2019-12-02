@@ -1,27 +1,19 @@
 <% content_for(:navbar_text) { "FAMILY" } %>
 <div class="container">
   <h1 id="famfam">Your Family</h1>
-
   <% @childrens.each do |user| %>
-    <div class="card">
-      <%= user.first_name %>
-      <%= user.last_name %>
-      <%= user.email %>
-      <%= user.reward_amount %>
-    </div>
-
-      <div class="family-card">
+    <div class="family-card">
       <div style="width:80px;"><img src="https://image.flaticon.com/icons/svg/477/477199.svg"></div>
       <p><%= user.first_name %></p>
-
-<% if user.reward_amount == 0 %>
-      <div class="reward-low">15</div>
+      <% if user.reward_amount == 50 %>
+        <div class="reward-low"><%= user.reward_amount %></div>
       <% elsif user.reward_amount == 100 %>
-      <div class="reward-medium">100</div>
-      <% else %>
-      <div class="reward-high">200</div>
-<% end %>
+        <div class="reward-medium"><%= user.reward_amount %></div>
+      <% else user.reward_amount == 150 %>
+        <div class="reward-high"><%= user.reward_amount %></div>
+      <% end %>
       </div>
+    </div>
   <% end  %>
 
 
