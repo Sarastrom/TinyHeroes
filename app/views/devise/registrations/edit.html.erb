@@ -1,5 +1,5 @@
 <% content_for(:navbar_text) { "UPDATE PROFILE" } %>
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 >Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -35,7 +35,7 @@
         <% User::AVATAR_NAMES.each do |avatar| %>
           <input type="radio" class="d-none" value="<%= avatar %>" name="user[avatar]" id="user_avatar_<%= avatar %>">
           <label for="user_avatar_<%= avatar %>">
-            <%= image_tag avatar, style: "height: 100px;" %>
+            <%= image_tag avatar, style: "height: 100px;"%>
           </label>
         <% end %>
        </div>

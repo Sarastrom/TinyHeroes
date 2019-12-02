@@ -1,4 +1,4 @@
-<div class="navbar-title"><h4><% content_for(:navbar_text) { "MISSIONS" } %></h4></div>
+<div class="navbar-title"><h4 id="mismis"><% content_for(:navbar_text) { "MISSIONS" } %></h4></div>
   <div class="container">
     <div class="navbar-title"></div>
       <div class="task-cards">
@@ -23,6 +23,9 @@
                   <% end %>
                   <% if mission.user && mission.user == current_user && !mission.completed    %>
                     <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
+                  <% end %>
+                  <% if mission.user && mission.user.parent == current_user && mission.completed? %>
+                    <%= link_to 'verify', mark_verify_mission_path(mission), method: :post %>
                   <% end %>
                 </div>
                 <div class="task-card-button">
@@ -61,7 +64,7 @@
                 <% Mission::MISSION_ICON.each do |icon| %>
                   <input type="radio" class="d-none" value="<%= icon %>" name="mission[icon]" id="mission_icon_<%= icon %>">
                   <label for="mission_icon_<%= icon %>">
-                    <%= image_tag icon, style: "height: 50px;" %>
+                    <%= image_tag icon, style: "height: 50px;", class: "icon" %>
                   </label>
                 <% end %>
               </div>
@@ -70,7 +73,6 @@
           </div>
         </div>
       </div>
-    </div>
     </div>
 </div>
 
