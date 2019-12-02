@@ -1,7 +1,7 @@
 <% content_for(:navbar_text) { "MY FAMILY" } %>
 <div class="container">
 
-  <h1 id="famfam">Your Family</h1>
+  <h1 id="famfam"></h1>
 
   <% @childrens.each do |user| %>
     <div class="card">
@@ -26,8 +26,11 @@
   <% end  %>
 
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> + </button>
 
+
+<div class="new-family-button" data-toggle="modal" data-target="#exampleModal">
+  <i class="fas fa-plus" ></i>
+</div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -39,12 +42,11 @@
         </button>
       </div>
 
-      <div class="modal-body" style="padding:5px!important;">
-       <div class="login-form d-flex justify-content-center">
+      <div class="modal-body">
         <%= simple_form_for User.new, url: create_child_path, method: :post do |f| %>
-          <%= f.input :first_name %>
-          <%= f.input :email %>
-          <%= f.input :password %>
+          <%= f.input :first_name, required: true %>
+          <%= f.input :email, required: true %>
+          <%= f.input :password, required: true %>
       <div class="form-group">
         <label class="control-label radio optional">Avatar</label>
         <input type="hidden" name="user[avatar]" value="">
@@ -52,12 +54,12 @@
           <% User::AVATAR_NAMES.each do |avatar| %>
             <input type="radio" class="d-none" value="<%= avatar %>" name="user[avatar]" id="user_avatar_<%= avatar %>">
             <label for="user_avatar_<%= avatar %>">
-              <%= image_tag avatar, style: "height: 50px;", class:"avatar" %>
+              <%= image_tag avatar, required: true, style: "height: 50px;", class:"avatar" %>
             </label>
           <% end %>
         </div>
       </div>
-          <%= f.submit %>
+          <%= f.submit "Create", class: "btn btn-primary" %>
         <% end %>
       </div>
     </div>
