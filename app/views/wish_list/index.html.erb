@@ -6,14 +6,15 @@
       class: "wish-form-control",
       placeholder: "Search for you childs name"%>
     <% end %>
-
+        <% if current_user.is_parent? %>
     <div class="new-wish-card" data-toggle="modal" data-target="#new-wish-modal">
       <i class="fas fa-plus" ></i>
     </div>
+    <% end  %>
 
     <br>
 
-  <div class="all_wishes">
+  <div class="all_wishes" style="padding-top:20px;">
     <% @wish_lists.each do |wl| %>
       <div class="wish-card">
         <%= cl_image_tag wl.photo.key, height: 50, width: 50, crop: :fill%>

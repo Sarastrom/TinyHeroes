@@ -2,9 +2,13 @@
   <div class="container">
     <div class="navbar-title"></div>
       <div class="task-cards">
+        <% if current_user.is_parent? %>
         <div class="button-card" data-toggle="modal" data-target="#new-mission-modal">
           <i class="fas fa-plus" ></i>
         </div>
+        <% end  %>
+
+
         <div class="pending-tasks">
           <% if @missions.any? %>
           <h1>Completed missions</h1>
