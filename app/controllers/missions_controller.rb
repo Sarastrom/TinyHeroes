@@ -1,6 +1,7 @@
 class MissionsController < ApplicationController
   def index
-    @missions = Mission.where(creator: current_user).or(Mission.where(user: current_user))
+    @missions = Mission.where(creator: current_user).or(Mission.where(user: current_user)).where(completed: true)
+    @not_completed_missions = Mission.where(creator: current_user).or(Mission.where(user: current_user)).where(completed: false)
     @favourites = []
   end
 
