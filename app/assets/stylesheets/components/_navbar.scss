@@ -1,6 +1,6 @@
 .navbar {
   color: white!important;
-  font-family: Impact;
+  font-family: Roboto;
   font-weight: bold;
   align-items: center;
   height: 72px;
@@ -29,11 +29,11 @@
 .menu-icon {
   color: white;
 }
-.nav-item {
+.nav-item-main {
   width: 120px;
   margin: 0 0 0 auto;
   a {
-    color: white;
+    color: white!important;
   }
 }
 .dropdown-item {

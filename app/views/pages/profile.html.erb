@@ -1,43 +1,66 @@
-<% content_for(:navbar_text) { "PROFILE" } %>
-<div class="container">
-  <div class="UserName"> <h3><%=  current_user.first_name.capitalize %></h3>
-    <% if current_user.avatar %>
-    <%= image_tag current_user.avatar, height: 70, width: 70, crop: :fill %>
-    <% end %>
-  </div>
-<hr>
+<% content_for(:navbar_text) { "MY PROFILE" } %>
+<div class="profile-page">
 
-<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="missons-tab" data-toggle="tab" href="#missions" role="tab" aria-controls="missions" aria-selected="false">Missions</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
-    <div class="container">
-      <div class="d-flex bd-highlight">
-        <div class="p-2 flex-shrink-1 bd-highlight">
-          <%= image_tag ("email.png"), height: 30, width: 30 %>
+  <ul class="nav nav-tabs nav-fill d-flex align-items-center justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="missons-tab" data-toggle="tab" href="#missions" role="tab" aria-controls="missions" aria-selected="false">Missions</a>
+    </li>
+  </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+
+        <div class="about">
+          <div class="email-info d-flex align-items-center justify-content-start">
+              <% if current_user.avatar %>
+              <%= image_tag current_user.avatar, height: 40, width: 40, crop: :fill %>
+              <% end %>
+              <h2><%=  current_user.first_name.capitalize %></h2>
+          </div>
+
+          <div class="email-address d-flex align-items-center justify-content-start">
+              <%= image_tag ("email.png"), height: 30, width: 40 %>
+              <h2><%= current_user.email %></h2>
+          </div>
         </div>
-        <div class="p-2 w-100 bd-highlight">
-          <%= current_user.email %>
-        </div>
-      </div>
-      <div>
+
+      <!-- <div>
         <%= current_user.reward_amount %>
+      </div> -->
+      </div>
+
+
+  <div class="tab-pane fade" id="missions" role="tabpanel" aria-labelledby="missions-tab">
+    <div class="mission-cards">
+    <% current_user.created_missions.each do |mission| %>
+      <div class="mission-card">
+                <div class="mission-icon">
+                    <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
+                </div>
+
+                <div class="mission-card-info">
+                  <h2><%= mission.name %></h2>
+                  <p><%= mission.description %></p>
+                  <h3>Bobby</h3>
+                </div>
+
+                <div class="mission-card-button">
+                  <div class="coin"><h6><%= mission.reward %></h6>
+                  </div>
+                  <p><%= mission.completed %></p>
+                </div>
+
+    <% end %>
       </div>
     </div>
-    <div>
-      <%= link_to 'Edit Profile', edit_user_registration_path, class:"EditProfile"%> <br>
+  </div>
+
+   <div class="extras">
+      <%= link_to 'Edit Profile', edit_user_registration_path %> <br>
+        <%= link_to "Back", missions_path %>
     </div>
-  </div>
-  <div class="tab-pane fade" id="missions" role="tabpanel" aria-labelledby="missions-tab">
-    <% current_user.created_missions.each do |mission| %>
-    <%= mission.name %>
-    <% end %>
-  </div>
-  <%= link_to "Back", missions_path %>
+
 </div>

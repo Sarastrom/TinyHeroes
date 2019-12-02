@@ -1,4 +1,140 @@
-h3 {
-  font-weight: bold!important;
-  color: #0B3BAE;
+.profile-page {
+  padding: 10px;
+  margin-top: 38px;
+  display:flex;
+  flex-direction: column;
+  space-between: center;
 }
+
+.nav-tabs {
+  text-align: center;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: #0B3BAE;
+  border-radius: 5px;
+
+}
+
+.username {
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-item {
+  width: 50%;
+}
+
+
+#about-tab .nav-link.active{
+  color: white!important;
+}
+
+.extras {
+  color: #0B3BAE!important;
+}
+
+.nav-tabs .nav-link {
+  border: 1px solid #0b3bae;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #0b3bae;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.about {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  h2 {
+    margin-left: 5px;
+    font-size: 18px;
+    color: #0B3BAE;
+  }
+
+}
+
+
+#missions {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.mission-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.mission-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  width: 340px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.mission-card h2 {
+  color: #0B3BAE;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.mission-card p {
+  font-size: 10px;
+}
+
+.mission-card-info {
+  padding: 10px;
+  flex-grow: 1;
+  // height: inherit;
+p {
+  margin-bottom: 4px;
+  }
+}
+
+.mission-card-info h3 {
+  font-size: 10px;
+  font-weight: bold;
+  color: #F48779;
+  margin-bottom: 0px;
+}
+
+.mission-icon {
+  color: #12C0B6;
+  font-size: 38px;
+  position: relative;
+  padding:5px;
+}
+
+.coin {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #F6C953;
+  color: white;
+  border: 2px solid #EABA3D;
+  margin-right: 0px 5px 0px 0px;
+  h6 {
+    font-size: 10px;
+    margin: 0 !important;
+    text-align: center;
+    transform: translate(0px, -1px);
+  }
+}
+
