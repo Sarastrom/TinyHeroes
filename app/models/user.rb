@@ -16,9 +16,9 @@ class User < ApplicationRecord
 
   def receive_reward(amount)
     if self.reward_amount.present?
-      self.reward_amount += amount
+      self.reward_amount = self.reward_amount.to_i + amount.to_i
     else
-      self.reward_amount = amount
+      self.reward_amount = amount.to_i
     end
     self.save
   end
