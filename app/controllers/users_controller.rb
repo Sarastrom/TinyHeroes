@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(create_child_params)
     @user.parent = current_user
     @user.save
-    redirect_to users_family_path
+    redirect_to missions_path
   end
 
   def create_child_params
