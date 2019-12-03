@@ -15,6 +15,7 @@ border-radius: 10px;
   font-weight: bold!important;
   }
 }
+
 .form-group {
   color: white;
 }
@@ -40,3 +41,16 @@ border-radius: 10px;
 .icon {
   opacity: 0.7;
 }
+
+input#mission_name::placeholder {
+ font-style: italic;
+}
+
+textarea#mission_description::placeholder {
+ font-style: italic;
+}
+
+input#mission_reward::placeholder {
+ font-style: italic;
+}
+

@@ -91,7 +91,7 @@
           </div>
           <div class="modal-body">
             <%= simple_form_for Mission.new do |f| %>
-              <%= f.input :name, required: true, label: 'Title', placeholder: 'Laundry' %>
+              <%= f.input :name, required: true, label: 'Title', placeholder: 'Laundry'%>
               <%= f.input :description, label:'Useful tips', placeholder: 'Wash the whites (program: cottons at 60 C)', input_html: { maxlength: 91 }%>
               <%= f.input :reward, required: true, placeholder: '20', input_html: { required: true }, hint: 'The average reward is 20 coins/task ≈ 50p'%>
               <%= f.input :user_id, label:'Assign to', as: :radio_buttons, collection: current_user.children, label_method: :first_name %>
