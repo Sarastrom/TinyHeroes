@@ -30,9 +30,16 @@
 .menu-icon {
   color: white;
 }
+
+.dropdown-menu {
+  border-radius: 50%;
+}
+
 .nav-item-main {
   width: 120px;
   margin: 0 0 0 auto;
+  border-radius: 5px;
+  background-color: #5081F6;
   a {
     color: white!important;
   }
@@ -40,7 +47,6 @@
 .dropdown-item {
   text-align: right;
   padding-right: 11px;
-  background-color: #0B3BAE;
   margin-right: 0;
 }
 .navbar-light .navbar-toggler {
