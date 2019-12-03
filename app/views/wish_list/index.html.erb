@@ -23,6 +23,7 @@
             <% if current_user.parent.nil? %>
               <h3><%= wl.children_who_liked %></h3>
             <% else %>
+            <% if current_user.reward_amount >= wl.amount %>
               <%= simple_form_for(Like.new) do |f| %>
                 <%= f.input :wish_list_id, :as => :hidden, :input_html => { :value => wl.id } %>
                 <%= f.submit %>
