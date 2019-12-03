@@ -10,9 +10,9 @@ class WishList < ApplicationRecord
       like.user.first_name
     end
     if list.empty?
-      return "No likes yet 😢"
+      return "No claims yet 😢"
     else
-      return "Like by #{list.uniq.to_sentence}"
+      return "Claimed by #{list.uniq.to_sentence}"
     end
   end
 end
