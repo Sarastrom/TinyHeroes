@@ -21,17 +21,7 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
-  &.open {
-    background-color: red;
-    // p { display: none;}
   }
-  &.completed {
-    background-color: green;
-  }
-  &.verified {
-    background-color: yellow;
-  }
-}
 
 .completed {
   background-color: green;
