@@ -8,40 +8,6 @@
         </div>
         <% end  %>
 
-
-        <div class="pending-tasks">
-          <% if @missions.any? %>
-          <h1>Completed missions</h1>
-            <% @missions.each do |mission| %>
-              <div class="task-card <%= mission.verify? ? 'verified': 'completed' %>">
-                <div class="task-mission.user.first_namemission.user.first_namemission.user.first_namemission.user.first_nameicon">
-                  <% if mission.icon %>
-                    <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
-                  <% end %>
-                </div>
-                <div class="task-card-info">
-                  <h1><%= mission.completed  %></h1>
-                  <h1><%=  mission.verify %></h1>
-                  <h2><%= mission.name %></h2>
-                  <p><%= mission.description %></p>
-                  <% if mission.user && mission.user != current_user %>
-                  <h3> <%= mission.user.first_name %></h3>
-                  <% end %>
-                  <% if mission.user && mission.user == current_user && !mission.completed %>
-                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
-                  <% end %>
-                  <% if mission.user && mission.user.parent == current_user && mission.completed? && !mission.verify? %>
-                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post %>
-                  <% end %>
-                </div>
-                <div class="task-card-button">
-                  <div class="coin"><h6><%= mission.reward %></h6></div>
-                  <p><%= mission.completed %></p>
-                </div>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
         <div class="pending-tasks">
           <% if @not_completed_missions.any? %>
           <h1>Pending missions</h1>
@@ -74,6 +40,37 @@
           <% end %>
         </div>
       </div>
+        <div class="pending-tasks">
+          <% if @missions.any? %>
+          <h1>Completed missions</h1>
+            <% @missions.each do |mission| %>
+              <div class="task-card <%= mission.verify? ? 'verified': 'completed' %>">
+                <div class="task-mission.user.first_namemission.user.first_namemission.user.first_namemission.user.first_nameicon">
+                  <% if mission.icon %>
+                    <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
+                  <% end %>
+                </div>
+                <div class="task-card-info">
+                  <h2><%= mission.name %></h2>
+                  <p><%= mission.description %></p>
+                  <% if mission.user && mission.user != current_user %>
+                  <h3> <%= mission.user.first_name %></h3>
+                  <% end %>
+                  <% if mission.user && mission.user == current_user && !mission.completed %>
+                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
+                  <% end %>
+                  <% if mission.user && mission.user.parent == current_user && mission.completed? && !mission.verify? %>
+                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post %>
+                  <% end %>
+                </div>
+                <div class="task-card-button">
+                  <div class="coin"><h6><%= mission.reward %></h6></div>
+                  <p><%= mission.completed %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
       <div class="favourite-tasks">
         <% if @favourites.any? %>
           <h1>Favourites</h1>
