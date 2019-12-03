@@ -5,9 +5,9 @@
 
   <% @childrens.each do |user| %>
     <div class="family-card">
-      <div style="width:70px;"><img src="https://image.flaticon.com/icons/svg/477/477199.svg"></div>
+      <div><%= image_tag user.avatar.nil? ? 'unicorn.png' : user.avatar, class: 'avatar-icon' %></div>
       <p><%= user.first_name %></p>
-      <div class="gold-coins"><%= user.reward_amount %></div>
+      <div class="gold-coins"><%= user.reward_amount.nil? ? '0' : user.reward_amount %></div>
       </div>
   <!--     <div class="progress-status">
       <% if user.reward_amount == 50 %>

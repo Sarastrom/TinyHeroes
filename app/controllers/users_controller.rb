@@ -12,6 +12,6 @@ class UsersController < ApplicationController
   end
 
   def create_child_params
-    params.require(:user).permit(:first_name, :email, :password)
+    params.require(:user).permit(:first_name, :email, :password, :avatar)
   end
 end
