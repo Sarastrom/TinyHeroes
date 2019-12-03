@@ -44,7 +44,7 @@ class MissionsController < ApplicationController
     @mission = Mission.find(params[:id])
     @mission.mark_verified
     @mission.user.receive_reward(@mission.reward)
-    redirect_to missions_path, notice: "You just earned #{@mission.reward} coins"
+    redirect_to missions_path, notice: "You just awarded #{@mission.reward} coins"
   end
 
   private
