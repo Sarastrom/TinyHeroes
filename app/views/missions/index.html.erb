@@ -13,10 +13,6 @@
           <% if @missions.any? %>
           <h1>Completed missions</h1>
             <% @missions.each do |mission| %>
-            <% if (mission.completed != true && mission.verify != true ) then status = "open" %>
-              <% elsif (mission.completed == true && mission.verify != true ) then status = "completed" %>
-              <% elsif (mission.completed  == true && mission.verify == true ) then status = "verified" %>
-              <% end %>
               <div class="task-card <%= mission.verify? ? 'verified': 'completed' %>">
                 <div class="task-mission.user.first_namemission.user.first_namemission.user.first_namemission.user.first_nameicon">
                   <% if mission.icon %>
@@ -50,10 +46,6 @@
           <% if @not_completed_missions.any? %>
           <h1>Pending missions</h1>
             <% @not_completed_missions.each do |mission| %>
-              <% if (mission.completed != true && mission.verify != true ) then status = "open" %>
-              <% elsif (mission.completed == true && mission.verify != true ) then status = "completed" %>
-              <% elsif (mission.completed  == true && mission.verify == true ) then status = "verified" %>
-              <% end %>
               <div class="task-card not-completed">
                 <div class="task-mission.user.first_namemission.user.first_namemission.user.first_namemission.user.first_nameicon">
                   <% if mission.icon %>
