@@ -7,7 +7,9 @@
     <div class="family-card">
       <div><%= image_tag user.avatar.nil? ? 'unicorn.png' : user.avatar, class: 'avatar-icon' %></div>
       <p><%= user.first_name %></p>
-      <div class="gold-coins"><%= user.reward_amount.nil? ? '0' : user.reward_amount %></div>
+      <div class="gold-coins">
+        <div class="coin-amount"><%= user.reward_amount.nil? ? '0' : user.reward_amount %></div>
+        </div>
       </div>
   <!--     <div class="progress-status">
       <% if user.reward_amount == 50 %>
@@ -18,19 +20,17 @@
       <div class="d-flex justify-content-center align-items-center;" style="background-color: gold; width:150px; border:1px solid black;">Progress: 60%</div>
       <% end %>
       </div> -->
-    </div>
-  <% end  %>
+  <% end %>
 
-
-
-<% if current_user.is_parent? %>
+  <% if current_user.is_parent? %>
   <div class="button-position">
     <div class="new-family-button" data-toggle="modal" data-target="#exampleModal">
-      <i class="fas fa-plus" ></i>
+     Add Child  <i class="fas fa-plus" ></i>
     </div>
   </div>
 <% end %>
-<% console %>
+    </div>
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -43,9 +43,9 @@
 
       <div class="modal-body">
         <%= simple_form_for User.new, url: create_child_path, method: :post do |f| %>
-          <%= f.input :first_name, required: true %>
-          <%= f.input :email, required: true %>
-          <%= f.input :password, required: true %>
+          <%= f.input :first_name, required: true, placeholder: "Child name" %>
+          <%= f.input :email, required: true, placeholder: "No email? Use tiny@heroes.com" %>
+          <%= f.input :password, required: true, placeholder: "Child password" %>
       <div class="form-group">
         <label class="control-label radio optional">Avatar</label>
         <input type="hidden" name="user[avatar]" value="">

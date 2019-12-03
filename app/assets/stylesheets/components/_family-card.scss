@@ -22,8 +22,7 @@
     justify-content:space-around;
 align-items:center;
   padding:10px 0;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid white;
   margin:5px 0;
     p {
   font-size:20px;
@@ -32,15 +31,20 @@ align-items:center;
 }
 
 .gold-coins {
-  background-color:gold;
-  border-radius: 50%;
-  border: 1px solid white;
-  width:50px;
-  height:50px;
+  background-image: url(coin.png);
+  background-size:cover;
+  width:60px;
+  height:60px;
   display: flex;
   align-items:center;
-  justify-content:center;
+  justify-content: center;
 }
+
+ .coin-amount {
+      display: flex;
+  align-items:center;
+  justify-content: center;
+  }
 
 .avatar-icon {
   width:50px;
