@@ -1,7 +1,8 @@
 <% content_for(:navbar_text) { "TINY HEROES" } %>
 
 <div class="homeImage">
-  <p>Reward Your Children<br> For Their Efforts <br> As Your Tiny Heroes! </p>
+
+  <div class="d-flex justify-content-center align-items-center"><p style="color:black;">Reward Your Children For Their Efforts <br> As Your Tiny Heroes! </p></div>
     <button id="login_button"><%= link_to "Log In", new_user_session_path, class: "button_text" %></button>
     <button id="signup_button"><%= link_to "Sign Up", new_user_registration_path, class: "button_text" %></button>
 </div>
