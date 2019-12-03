@@ -8,6 +8,8 @@ class LikesController < ApplicationController
     @wish_list = WishList.find(params[:like][:wish_list_id])
     @like.wish_list = @wish_list
     @like.user = current_user
+    current_user.reward_amount -= @wish_list.amount
+    current_user.save
     @like.save
     redirect_to request.referrer
   end

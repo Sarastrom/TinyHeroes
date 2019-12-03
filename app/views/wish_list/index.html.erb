@@ -24,12 +24,13 @@
               <h3><%= wl.children_who_liked %></h3>
               <h2><%= wl.likes.count %></h2>
             <% else %>
+            <% if current_user.reward_amount >= wl.amount %>
               <%= simple_form_for(Like.new) do |f| %>
                 <%= f.input :wish_list_id, :as => :hidden, :input_html => { :value => wl.id } %>
                 <%= f.submit %>
               <% end %>
+              <% end %>
               <h3><%= wl.likes.count %></h3>
-
             <% end %>
           </div>
           <div class="wish-card-button">
