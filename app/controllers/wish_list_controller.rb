@@ -9,6 +9,7 @@ class WishListController < ApplicationController
       @wish_lists = WishList.all
     end
   end
+
   def new
     @wish_list = WishList.new
   end

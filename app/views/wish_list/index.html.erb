@@ -1,5 +1,6 @@
 <% content_for(:navbar_text) { "WISH LIST" } %>
 <div class="container">
+  <% if current_user.is_parent? %>
   <%= form_tag wish_list_index_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
@@ -11,6 +12,7 @@
       <i class="fas fa-plus" ></i>
     </div>
     <% end  %>
+    <% end %>
 
     <br>
 
@@ -26,7 +28,7 @@
             <% if current_user.reward_amount || 0 >= wl.amount %>
               <%= simple_form_for(Like.new) do |f| %>
                 <%= f.input :wish_list_id, :as => :hidden, :input_html => { :value => wl.id } %>
-                <%= f.submit %>
+                <%= f.submit 'Claim prize!' %>
               <% end %>
             <% end %>
           </div>
