@@ -7,7 +7,7 @@
     <div class="family-card">
       <div><%= image_tag user.avatar.nil? ? 'unicorn.png' : user.avatar, class: 'avatar-icon' %></div>
       <p><%= user.first_name.capitalize %></p>
-      <div class="gold-coins">
+      <div class="gold-coins" style="background-image: <%= image_url('coin.png') %>">
         <div class="coin-amount"><%= user.reward_amount.nil? ? '0' : user.reward_amount %></div>
         </div>
       </div>
