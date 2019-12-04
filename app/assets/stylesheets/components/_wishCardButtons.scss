@@ -1,0 +1,34 @@
+.wish-card-button {
+  display: flex;
+  h6 {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.new-wish-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 32px;
+  height: 80px;
+  width: 340px;
+  background: #167afb;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 18px;
+}
+
+.claim-button {
+  color: #fff;
+  background-color: #0b3bae;
+  border-radius:5px;
+  border-color: #0b3bae;
+  font-size: 12px;
+  padding: 2px;
+  width: 50px;
+}

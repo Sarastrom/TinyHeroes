@@ -1,3 +1,17 @@
+.new-family-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  height: 80px;
+  width: 340px;
+  background: #167afb;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-top: 27px;
+  border-radius: 5px;
+}
 
 .btn-primary {
   color: #fff;
@@ -14,3 +28,6 @@
 .close {
   color: white;
 }
+
+
+
