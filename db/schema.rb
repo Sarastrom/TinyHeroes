@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_141109) do
 
   create_table "missions", force: :cascade do |t|
     t.bigint "user_id"
-    t.boolean "completed", default: false
+    t.boolean "completed"
     t.string "name"
     t.text "description"
     t.integer "reward"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_141109) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
-    t.integer "reward_amount"
+    t.string "reward_amount"
     t.string "first_name"
     t.string "last_name"
     t.integer "parent_id"

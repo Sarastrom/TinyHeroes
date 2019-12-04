@@ -1,0 +1,187 @@
+@media (min-width: 750px) and (max-width: 1100px) {
+    .nav-wrapper .nav > li > a {
+        padding: 10px 7px !important;
+        font-size: 11px;
+    }
+    .nav-wrapper .navbar-nav ul.dropdown-menu.playstation {
+        min-width: 776px !important;
+        left: -20px !important;
+    }
+    .nav-wrapper .navbar-nav ul.dropdown-menu.xbox {
+        min-width: 776px !important;
+        left: -120px !important;
+    }
+    .nav-wrapper .navbar-nav ul.dropdown-menu.nintendo {
+        min-width: 776px !important;
+        left: -170px !important;
+    }
+    .nav-wrapper .navbar-nav ul.dropdown-menu.pc {
+        min-width: 620px !important;
+        left: -190px !important;
+    }
+    .nav-wrapper .navbar-nav ul.dropdown-menu.tech {
+        min-width: 500px !important;
+        left: -280px !important;
+    }
+
+    .nav-wrapper .navbar-nav ul.dropdown-menu.preowned {
+        min-width: 410px !important;
+        left: -230px !important;
+    }
+    
+    .nav-wrapper .navbar-nav ul.dropdown-menu.deals {
+        min-width: 620px !important;
+        left: -330px !important;
+    }
+}
+
+.nav-wrapper {
+    width: 100%;
+    border-bottom: 1px solid #2e2e2e;
+    background-color: #ffffff; 
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.nav-wrapper .nav-container {
+    max-width: 1200px;
+    margin: 0 auto !important;
+    display: table !important;
+    table-layout: auto !important;
+    float: none !important;
+    width: 100% !important;
+    color: #2e2e2e !important;
+}
+
+.nav-wrapper .navbar {
+    margin-bottom: 0px !important;
+}
+
+.nav-wrapper .newPlatformSplitNav .consoleList {
+    border-bottom: 0px !important;
+}
+
+.nav-wrapper .navbar-default {
+    background-color: #FFFFFF !important;
+    border-color: transparent !important;
+}
+
+.nav-wrapper .navbar-nav {
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: space-between;
+    table-layout: auto !important;
+    float: none !important;
+    width: 100% !important;
+    color: #2e2e2e !important;
+}
+
+.nav-wrapper .navbar-nav li a {
+    color: #2e2e2e;
+}
+
+.nav-wrapper .navbar-nav li a.topLevel {
+    color: #2e2e2e !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-wrapper .navbar-nav li a.topLevel:hover {
+    text-decoration: underline;
+}
+
+.nav-wrapper .navbar-nav .ootw {
+    text-align: center;
+}
+
+.nav-wrapper .navbar-nav .ootw p.title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #FFFFFF;
+    background-color: #2e2e2e;
+    padding: 2px 5px;
+}
+
+.nav-wrapper .navbar-nav .ootw p.price {
+    color: #2e2e2e;
+    margin: 3px 0px !important;
+    font-size: 14px;
+}
+
+.nav-wrapper .navbar-nav .ootw span.save {
+    color: red;
+}
+
+.nav-wrapper .navbar-nav span.button {
+    display: inline-block;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 2px solid #2e2e2e;
+    padding: 2px 10px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.nav-wrapper .navbar-nav span.button:hover {
+    color: #2e2e2e;
+    background-color: #ffffff;
+    border: 2px solid #2e2e2e;
+}
+
+.nav-wrapper .navbar-nav > li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+}
+
+.nav-wrapper .navbar-nav a.boldLink {
+    font-weight: bold;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu {
+    padding: 15px 0px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.playstation {
+    min-width: 810px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.xbox {
+    min-width: 810px;
+    left: -70px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.nintendo {
+    min-width: 810px;
+    left: -80px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.pc {
+    min-width: 620px;
+    left: -90px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.tech {
+    min-width: 500px;
+    left: -100px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.preowned {
+    min-width: 410px;
+    left: -100px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.accessories {
+    min-width: 410px;
+    left: -100px;
+}
+
+.nav-wrapper .navbar-nav ul.dropdown-menu.deals {
+    min-width: 500px;
+    left: -400px;
+}
