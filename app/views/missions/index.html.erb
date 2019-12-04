@@ -25,10 +25,10 @@
                   <h3> <%= mission.user.first_name %></h3>
                   <% end %>
                   <% if mission.user && mission.user == current_user && !mission.completed %>
-                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
+                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post, class: "done-button" %>
                   <% end %>
                   <% if mission.user && mission.user.parent == current_user && mission.completed? && !mission.verify? %>
-                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post %>
+                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post, class: "verify-button" %>
                   <% end %>
                 </div>
                 <div class="task-card-button">
@@ -57,10 +57,10 @@
                   <h3> <%= mission.user.first_name %></h3>
                   <% end %>
                   <% if mission.user && mission.user == current_user && !mission.completed %>
-                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post %>
+                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post, class: "done-button" %>
                   <% end %>
                   <% if mission.user && mission.user.parent == current_user && mission.completed? && !mission.verify? %>
-                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post %>
+                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post, class: "verify-button" %>
                   <% end %>
                 </div>
                 <div class="task-card-button">
@@ -81,7 +81,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Create a new mission</h3>
+            <h3 class="modal-title" id="exampleModalLabel">Create mission</h3>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

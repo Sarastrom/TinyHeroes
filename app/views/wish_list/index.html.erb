@@ -28,7 +28,7 @@
             <% if current_user.reward_amount.to_i >= wl.amount %>
               <%= simple_form_for(Like.new) do |f| %>
                 <%= f.input :wish_list_id, :as => :hidden, :input_html => { :value => wl.id } %>
-                <%= f.submit 'Claim prize!' %>
+                <%= f.submit 'Claim', class: "claim-button" %>
               <% end %>
             <% end %>
           </div>

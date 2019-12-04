@@ -2,7 +2,6 @@ body {
   background-color: #5ec8f161;
 }
 
-
 .task-cards {
   display: flex;
   flex-direction: column;
@@ -24,15 +23,21 @@ body {
   }
 
 .completed {
-  background-color: green;
+  border-style: solid;
+  border-width: medium;
+  border-color: green;
 }
 
 .not-completed {
-  background-color: red;
+  border-style: solid;
+  border-width: medium;
+  border-color: red;
 }
 
 .verified {
-  background-color: gold;
+  border-style: solid;
+  border-width: medium;
+  border-color: gold;
 }
 
 .task-card h2 {
@@ -85,7 +90,7 @@ p {
   font-size: 32px;
   height: 80px;
   width: 340px;
-  background: #F48779;
+  background: #167afb;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
   margin-bottom: -8px;
@@ -139,4 +144,24 @@ p {
   padding: 5px;
   font-weight: bold;
   }
+}
+
+.verify-button {
+  color: #fff;
+  background-color: green;
+  border-radius:5px;
+  border-color: green;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.done-button {
+  color: #fff;
+  background-color: green;
+  border-radius:5px;
+  border-color: green;
+  font-size: 12px;
+  padding: 3px;
+  width: 50px;
+
 }
