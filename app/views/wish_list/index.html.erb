@@ -23,7 +23,7 @@
           <div class="wish-card-info">
             <h2><%= wl.title %></h2>
             <% if current_user.parent.nil? %>
-              <h3><%= wl.children_who_liked(current_user).capitalize %></h3>
+              <h3><%= wl.children_who_liked(current_user) %></h3>
             <% end %>
             <% if current_user.reward_amount.to_i >= wl.amount %>
               <%= simple_form_for(Like.new) do |f| %>

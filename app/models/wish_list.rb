@@ -7,7 +7,7 @@ class WishList < ApplicationRecord
 
   def children_who_liked(current_user)
     list = likes.select {|like| like.user.parent == current_user}.map do |like|
-      like.user.first_name
+      like.user.first_name.capitalize
     end
     if list.empty?
       return "No claims yet 😢"
