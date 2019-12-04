@@ -1,27 +1,55 @@
 <% content_for(:navbar_text) { "MY PROFILE" } %>
 <div class="profile-page">
-  <div class="about">
-    <div class="personal-info">
-        <% if current_user.avatar %>
-        <%= image_tag current_user.avatar, height: 40, width: 40, crop: :fill %>
-        <% end %>
-        <h1><%=  current_user.first_name.capitalize %></h1>
+  <div class="profile-align">
+    <div class="d-flex justify-content-center"> <% if current_user.avatar %>
+      <%= image_tag current_user.avatar, height: 40, width: 40, crop: :fill %>
+      <% end %>
+      <h4><%= current_user.first_name.capitalize %></h4>
+      <br>
     </div>
 
-    <div class="email-address d-flex align-items-center justify-content-start">
-        <%= image_tag ("email.png"), height: 30, width: 40 %>
-        <h2><%= current_user.email %></h2>
+    <div class="d-flex justify-content-center">
+      <%= image_tag ("email.png"), height: 30, width: 40 %>
+      <p><%= current_user.email %></p>
     </div>
   </div>
-
-      <!-- <div>
-        <%= current_user.reward_amount %>
-      </div> -->
-      </div>
-
-    <div class="extras">
-      <%= link_to 'Edit Profile', edit_user_registration_path %> <br>
-        <%= link_to "Back", missions_path %>
-    </div>
-
 </div>
+
+
+<div class="extras">
+  <%= link_to 'Edit', edit_user_registration_path, :class=>"edit-btnbtn" %>
+    <br>
+  <%= link_to "Back", missions_path, :class=>"back-btnbtn" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  <div class="profile-align">
+       <div class="d-flex justify-contect-center">
+            <% if current_user.avatar %>
+            <%= image_tag current_user.avatar, height: 40, width: 40, crop: :fill %>
+            <% end %>
+
+            <h1><%= current_user.first_name.capitalize %></h1>
+        </div>
+          <br>
+        <div class="d-flex justify-contect-center">
+            <%= image_tag ("email.png"), height: 30, width: 40 %>
+            <h5><%= current_user.email %></h5>
+        </div>
+    </div> -->
