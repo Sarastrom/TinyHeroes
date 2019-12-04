@@ -39,13 +39,14 @@
   width: 120px;
   margin: 0 0 0 auto;
   border-radius: 7px;
-  background-color: #858AE3;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px #bdbdbd;
   a {
-    color: white!important;
+    color: #0B3BAE!important;
   }
 }
 .dropdown-item {
-  text-align: right;
+  text-align: left;
   padding-right: 11px;
   margin-right: 0;
 }

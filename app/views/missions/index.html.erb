@@ -51,10 +51,10 @@
                   <% end %>
                 </div>
                 <div class="task-card-info">
-                  <h2><%= mission.name %></h2>
+                  <h2><%= mission.name.capitalize %></h2>
                   <p><%= mission.description %></p>
                   <% if mission.user && mission.user != current_user %>
-                  <h3> <%= mission.user.first_name %></h3>
+                  <h3> <%= mission.user.first_name.capitalize %></h3>
                   <% end %>
                   <% if mission.user && mission.user == current_user && !mission.completed %>
                     <%= link_to 'Done', mark_complete_mission_path(mission), method: :post, class: "done-button" %>
