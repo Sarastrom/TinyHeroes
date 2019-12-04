@@ -1,0 +1,893 @@
+/*/// Vers 0.0038 ///*/
+
+/*//////////// DEFAULT VIEW - PDP ////////////*/
+
+.stockCheckWidget {
+    font-size: 1em;
+    margin: 1em auto;
+    position: relative;
+}
+
+.stockCheckWidget input#postcode {
+    border: 1px solid #cccccc;
+    margin-right: 1em;
+    padding: 0.5em;
+    width: 71%;
+}
+
+.checkstock {
+    margin-left: 0;
+    text-align: left !Important;
+    font: inherit;
+    font-weight: bold;
+}
+
+.stockCheckWidget .primary {
+    font-size: 1em;
+    background-color: #a12283;
+    border: medium none;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5em;
+    text-transform: uppercase;
+    width: 25%;
+}
+
+.stockCheckWidget .primary:hover {
+    background-color: #b61d92;
+}
+
+.section.stockOptions {
+    margin-bottom: 0px;
+}
+
+.field-validation-error { color: #CC0000; }
+
+#stockCheckerExpanded .regionPrice span.platformLogo {
+ 	display: inline-block;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+
+/*//////////// STORES VIEW ////////////*/
+
+div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded {
+    z-index: 8030;
+    width:auto;
+    height: auto;
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 1em;
+    opacity: 1;
+    overflow: visible;
+    padding: 1em 1em 2em;
+    font-family:inherit; 
+    /* just to override salmon PDP css */
+    margin-left: auto;
+    text-align:left;
+	
+}
+
+div#GAMEStockChecker.clickAndReserve .storeSelection {
+    float: left;
+    width: 33%;
+}
+
+div#GAMEStockChecker.clickAndReserve .confirmationPane {
+    float: left;
+    width: 100%;
+}
+
+div#GAMEStockChecker.clickAndReserve .storeOverview {
+	width: 66%;
+	float: right;
+}
+
+div#GAMEStockChecker.clickAndReserve .storeOpeningHoursRegion h3 {
+    font-weight: bold;
+}
+
+div#GAMEStockChecker.clickAndReserve .storeOpeningHoursRegion {
+    float: right;
+    text-align: right;
+    width: 40%;
+}
+
+div#GAMEStockChecker.clickAndReserve .storeAddressRegion {
+    float: left;
+    width: 50%;
+}
+
+div#GAMEStockChecker.clickAndReserve .storeAddressRegion .storeName {
+    color: #a12283;
+    font-weight:bold;
+}
+
+div#GAMEStockChecker.clickAndReserve #StoreDetailsRegion > div#googleMap {
+    height: 200px;
+    width: 100%;
+    margin-bottom:1em;
+    margin-top: 3.9em;
+}
+
+div#GAMEStockChecker.clickAndReserve .priceRegion .selectedDetails {
+    font-size: 1.3em;
+	  font-weight: normal;
+}
+
+div#GAMEStockChecker.clickAndReserve .region.packshot {
+    clear: both;
+    display: block;
+    float: left;
+    padding: 0;
+	  margin-right: 20px;
+}
+
+.regionTitle > h2 {
+    font-size: 19px;
+}
+
+.regionFormat {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.formatLabel {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.platformLogo::after {
+	height: 18px;
+}
+
+div#GAMEStockChecker.clickAndReserve .confirmationRegionPrice {
+    margin-left: 1em;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded .region.title {
+	border:0;
+	border-bottom:1px solid #dddddd;    
+	margin-bottom: 1em;
+}
+
+div#GAMEStockChecker.clickAndReserve .confirmationRegionPrice > h2 {
+    margin-bottom: 0.5em;
+}
+
+div#GAMEStockChecker.clickAndReserve .confirmationRegionPrice span.platformLogo 
+{
+    margin: 0;
+    display:inline;
+}
+
+div#GAMEStockChecker.clickAndReserve input#Postcode {
+	border:1px solid #cccccc;
+	font-size:1em;
+    padding: 0.5em;
+    text-transform: uppercase;
+    width:66%;
+}
+
+div#GAMEStockChecker.clickAndReserve .postcodeEnterSection {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+div#GAMEStockChecker.clickAndReserve .regionPrice button {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #ececec #ececec -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    color: #333333;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: normal !important;
+    margin: 0.25em 0.5em 0 0;
+    padding: 0.5em;
+    text-transform: none;
+    width: 100px;
+}
+
+div#GAMEStockChecker.clickAndReserve .regionPrice button.buttonSelected {
+    background-color: #ffffff;
+    border-color: #ececec #ececec -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    color: #333333;
+    font-weight: bold !important;
+    height: 36px;
+    width: 100px;
+}
+
+div#GAMEStockChecker.clickAndReserve .regionPrice button.buttonSelected::after {
+    background: #ffffff none repeat scroll 0 0;
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 93%;
+}
+
+div#GAMEStockChecker.clickAndReserve .regionPrice {
+    float: left;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 1em;
+    width: 98%;
+}
+
+.regionPrice.info {
+    border-top: 1px solid #ececec;
+    clear: both;
+    margin-left: 0 !important;
+    padding-top: 10px;
+    width: 100% !important;
+}
+
+.regionPrice li:first-child {
+    padding: 0;
+}
+
+.regionPrice li {
+    padding: 0 0;
+    position: relative;
+    display: inline-block;
+}
+
+/*Check other stores */
+.storeSelection p {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+div#GAMEStockChecker.clickAndReserve .postcodeEnterSection {
+    border-bottom: 0;
+}
+
+div#GAMEStockChecker.clickAndReserve .regionPrice > h2 {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    padding-left: 10px;
+}
+
+div#GAMEStockChecker.clickAndReserve div.regionPrice.itemTitle {
+    margin-bottom: 0.5em;
+    font-size: 14px !important;
+}
+
+.clickAndReserve .priceRegion {
+    font-family: "Open Sans",sans-serif !important;
+	display: block;
+    font-size: 14px !important;
+    font-weight: normal;
+    line-height: 18px;
+    margin-left: 0;
+}
+
+div.stockCheckerExpanded .region {
+    clear: both;
+    display: block;
+    padding: 0;
+}
+
+div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded .region.title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #dddddd;
+    border-image: none;
+    border-style: none solid;
+    border-width: 0;
+    margin-bottom: 1em;
+}
+
+div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded .region.title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #dddddd;
+    border-image: none;
+    border-style: none none none;
+    border-width: 0;
+    margin-bottom: 1em;
+}
+
+.section.stockOptions {
+    margin-top: 0 !important;
+}
+
+div#GAMEStockChecker.clickAndReserve .priceRegion .selectedFormat {
+	background-color: #a12283;
+    font-family: "Open Sans",sans-serif;
+    font-size: 1em;
+	border: medium none;
+    color: #ffffff;
+    cursor: default;
+    font-weight: bold;
+    padding: 0.4em;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 18px;
+}
+
+div#GAMEStockChecker.clickAndReserve .postcodeDisplaySection {
+    margin-bottom: 1em;
+    padding: 0.5em 0;
+}
+
+div#GAMEStockChecker.clickAndReserve .store {
+    border-bottom: 1px solid #dddddd;
+    display: block;
+    padding: 1em 0;
+    position: relative;
+    text-decoration: none;
+}
+
+div.storeDetails.selected {
+    background-color: #f2f0f3;
+}
+
+div#GAMEStockChecker.clickAndReserve .storeRagStatus {
+    float: left;
+    margin-right:0.25em;
+}
+
+div#GAMEStockChecker.clickAndReserve div.storeTitle {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+}
+
+div#GAMEStockChecker.clickAndReserve div.storeTitle .storeMiles {
+    color:#333333;
+    font-weight:normal;
+}
+
+div#GAMEStockChecker.clickAndReserve div.storeRagStatusText {
+    text-decoration: none !important;
+    color:#333333;
+    font-size: 1em;
+}
+
+.clickAndReserve .storeRegion .store0 {
+    border-top: 1px solid #dddddd;
+}
+
+div#GAMEStockChecker.clickAndReserve div.confirmationSuccess {
+    text-decoration: none !important;
+    color:#a12283;
+    font-size: 1.3em;
+    font-weight:bold;
+    margin: 0 0 6% 0;
+}
+
+div#GAMEStockChecker.clickAndReserve div.reservationLabel {
+    text-decoration: none !important;
+    color:#333333;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 6% 0;
+}
+
+div#GAMEStockChecker.clickAndReserve div.reservationNumber {
+    text-decoration: none !important;
+    color:#333333;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+div#GAMEStockChecker.clickAndReserve div.reservationHeld {
+    text-decoration: none !important;
+    color:#333333;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+div#GAMEStockChecker.clickAndReserve div.reservationHeldUntilContainer {
+    color:#333333;
+    /*margin: 0 0 6% 0;
+    padding: 0 0 10% 0;*/
+}
+
+div#GAMEStockChecker.clickAndReserve div.continueShoppingArea {
+    display: block;
+    margin: 5% 0 5% 0;
+    padding-bottom: 5%;
+    border-bottom: 1px solid #ccc;
+    width: 95%;
+}
+
+div#GAMEStockChecker.clickAndReserve div.continueShoppingButton {
+    display: block;
+    text-align: center;
+    background-color: #a12283;
+}
+
+div#GAMEStockChecker.clickAndReserve div.continueShoppingButton a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+b{
+	font-weight: bold;
+}
+
+div#GAMEStockChecker.clickAndReserve .confirmReservation {
+    /* color: #a12283; */
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: arial;
+    position: relative;
+    display: block;
+}
+
+div#GAMEStockChecker.clickAndReserve .backButton {
+    color: #a12283;
+    font-weight: bold;
+}
+
+div#GAMEStockChecker.clickAndReserve .reservationContactDetails {
+    text-decoration: none !important;
+    color:#333333;
+    font-size: 1em;
+    margin: 0 0 6% 0;
+}
+Div.emailDetailsContainer span.emailLabel, Div.mobileDetailsContainer span.mobileLabel{
+	font-weight:bold;
+}
+
+div#GAMEStockChecker.clickAndReserve .selectedPostcode {
+    font-weight: bold;
+}
+
+.storeSelection p {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+
+div#GAMEStockChecker.clickAndReserve .customerDetailsRegion {
+ float: left;
+    width: 33%;
+}
+
+div#GAMEStockChecker.clickAndReserve .checkPostcodeButton, 
+div#GAMEStockChecker.clickAndReserve .chooseThisStoreButton,
+div#GAMEStockChecker.clickAndReserve .confirmationButton {
+    background-color: #a12283;
+    border: 0 none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+div#GAMEStockChecker.clickAndReserve div#CustomerContactDetailsSection span.platformLogo {
+    padding-left: 0px;
+    display: inline-block;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#CustomerContactDetailsSection span.selectedFormat {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-right: 25px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#CustomerContactDetailsSection span.price {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#CustomerContactDetailsSection .priceRegion {
+    margin-left: 0px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#ReservationConfirmationSection span.platformLogo {
+    padding-left: 0px;
+    display: inline-block;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#ReservationConfirmationSection span.selectedFormat {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-right: 25px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#ReservationConfirmationSection span.price {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+div#GAMEStockChecker.clickAndReserve div#ReservationConfirmationSection .priceRegion {
+    margin-left: 0px;
+}
+
+div#GAMEStockChecker.clickAndReserve .customerDetailsRegion .confirmReservation {
+ /*margin-bottom: 20px;*/
+	position: relative;
+	display: block;
+	padding: 0 0 20px 0;
+}
+
+div#GAMEStockChecker.clickAndReserve .confirmationButton {
+    display: block;
+    width: 95%;
+    text-decoration: none;
+    margin: 0 0 3% 0;
+    text-align: center;
+}
+
+div#GAMEStockChecker.clickAndReserve .chooseThisStoreButtonSeperator {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+div#GAMEStockChecker.clickAndReserve .customerContactDetailsCapture { 
+    width: 95%;
+    line-height: 25px;
+    padding: 3px;
+    font-size: 14px;
+    position: relative;
+    display: block;
+	cursor: all-scroll;
+	-webkit-transform: translate3d(0,0,0)
+}
+
+div#GAMEStockChecker.clickAndReserve .chooseThisStoreRegion {
+    float: right;
+}
+
+div#GAMEStockChecker.clickAndReserve .chooseThisStoreButton {
+    margin-left: 0px;
+}
+
+div#GAMEStockChecker.clickAndReserve .postcodeEnterSection {
+    border-bottom: 0;
+}
+
+.regionCondition, .selectedDetails {
+    display: block;
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+    position: relative;
+}
+
+/*Form Fields*/
+div#GAMEStockChecker label{font-size: 0.8rem;font-weight: bold;margin: 0 0 3% 0;display: inline-block;}
+div#GAMEStockChecker input{margin:0 0 5% 0;}
+
+.recaptchaContainer{
+	margin:0 0 3% 0;
+}
+
+.disclaimerContainer{
+	margin:0 0 3% 0;
+}
+
+.confirmationInformation{
+	width: 33%;
+    float: left;
+}
+
+/* RESPONSIVE RULES */
+
+@media only screen and (max-width: 767px) and (min-width:1px) {
+  
+	.stockCheckerExpanded > div {
+	    border: 0; 
+        margin: 0;
+	    -webkit-transform: none;
+	    -moz-transform: none;
+	    -o-transform: none;
+	}
+	
+	div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded {
+	    overflow: auto;
+ 	    -webkit-overflow-scrolling: touch;
+	}
+	div#GAMEStockChecker.clickAndReserve .customerContactDetailsCapture {
+	    position: relative;
+ 	    -webkit-transform: translate3d(0,0,0);
+	}
+	
+  div#GAMEStockChecker.clickAndReserve .customerContactDetailsCapture input {position: fixed;}
+  div#GAMEStockChecker.clickAndReserve div.storeOverview {display:none;}
+  div#GAMEStockChecker.clickAndReserve .customerDetailsRegion {width:100%;}
+  div#GAMEStockChecker.clickAndReserve .storeSelection {width:100%;}
+  div#GAMEStockChecker.clickAndReserve .chooseThisStoreRegion {width:100%;}
+  div#GAMEStockChecker.clickAndReserve .chooseThisStoreButton {width:100%;}
+  div#GAMEStockChecker.clickAndReserve div#CustomerContactDetailsSection .priceRegion .price { margin-top: 5px; }
+}
+
+@media only screen and (max-width: 989px) and (min-width:1px)
+{
+    div#GAMEStockChecker.clickAndReserve input#Postcode {
+        width:66%;
+    }
+}
+
+@media only screen and (min-width:1500px)
+{
+    div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded {
+        left: 20%;
+        right: 20%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width:1px)
+{
+    div#GAMEStockChecker.clickAndReserve div.storeRegion a.store.desktop {
+        display:none;  
+    }
+ 
+    div#GAMEStockChecker.clickAndReserve div.storeRegion a.store.mobile {
+        display:block;
+        background-image: url("//img.game.co.uk/icons/icon_rightarrow_black.png"); 
+        background-position: 95% 50%;
+        background-repeat: no-repeat;
+        background-size: 12px auto; border-top: 1px solid #dddddd;
+    }  
+}
+
+@media only screen and (min-width:768px)
+{
+    div#GAMEStockChecker.clickAndReserve div.storeRegion .store.desktop {
+        display:block;
+    }
+
+    div#GAMEStockChecker.clickAndReserve div.storeRegion .store.mobile {
+        display:none;
+    } 
+}
+
+@media only screen and (min-device-width : 1px) and (max-device-width : 767px) {
+	
+	div#GAMEStockChecker.clickAndReserve .store{
+		width:100%;
+		display:inline-flex;
+	}
+    .stockCheckWidget {
+        font-size: 1em;
+        margin: 8px 5px;
+        position: relative;
+        padding: 10px;
+        background-color: #fff;
+    }
+    .checkstock {
+	    font-size: 16px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+    }
+    .stockCheckWidget input#postcode {
+	    width:70%;
+	    margin: 0 5px 10px 0;
+    }
+	
+	div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded {
+        font-family: arial 'Open Sans Condensed', sans-serif;
+    }
+    div#GAMEStockChecker.clickAndReserve .region.packshot {
+        padding:0 20px 0 0;
+    }
+    .regionPrice li {
+        width:49%;
+    }
+    .clickAndReserve .priceRegion, .regionFormat, .regionCondition, .selectedDetails {
+        font-size: 16px !important;
+        margin:0;
+        font-weight:normal !important;
+        padding: 10px 0 0 0;
+    }
+    .postcodeDisplaySection {
+         font-size: 16px;
+        font-weight:normal;
+        margin: 20px 0 0 0;
+    }
+    
+    div#GAMEStockChecker.clickAndReserve .regionPrice button {
+        width:100%;
+        background-color: #ececec;
+        font-size: 16px;
+    }
+    div#GAMEStockChecker.clickAndReserve .regionPrice button.buttonSelected {
+        width:100%;
+        height:100%;
+    }
+    div#GAMEStockChecker.clickAndReserve .regionPrice button.buttonSelected::after {
+       width:100%;
+    }
+    .storeName{
+        font-size: 16px;
+        color:#a12283
+    }
+    .storeDetails{
+        padding: 0 0 0 10px;
+    }
+    .storeSelection p {
+        font-size:16px;
+    }
+    .glyph.gameUi.error::before {
+        font-size:3em;
+        color:red;
+    }
+    .glyph.gameUi.success::before {
+        font-size:3em;
+        color:green;
+        }
+    .glyph.gameUi.warning::before {
+        font-size:3em;
+        color:orange;
+        }
+    .storeInformation{
+            display: inline-block;
+    width: 70%;
+    }
+    .storeButtons{
+        width: 30%;
+        display: inline-block;
+        padding: 0 10px;
+        vertical-align: top !important;
+    }
+    div#GAMEStockChecker.clickAndReserve div.storeRagStatusText {
+        font-size:16px;
+        padding: 10px 0 10px 0px;
+    }
+    .storeDetails .button {
+        float: right;
+        /*! position: absolute; */
+        top: 22px;
+        right: 10px;
+        padding: 6px 14px;
+        font-size: 12px;}
+    
+    .storeDetails .secondaryButton {
+        font-family: 'Open Sans Condensed', sans-serif;
+        /*! Float: right; */
+        display: inline-block;
+        margin: 0 0 10px;
+        position: relative;
+        top: 22px;
+        right: 10px;
+        padding: 6px 14px;
+        font-size: 12px;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        text-transform: uppercase;
+    }
+    .clickAndReserve .regionFormat {
+        display:none;
+    }
+    div#GAMEStockChecker.clickAndReserve .confirmationRegionPrice {
+    	float: none;
+        margin-left: 0;
+    }
+    div#GAMEStockChecker.clickAndReserve .region.packshot {
+    	margin-right:0;
+    }
+    div#GAMEStockChecker.clickAndReserve div#CustomerContactDetailsSection span.selectedFormat {
+    	width:0;
+    }
+    label{font-size: 1.5rem;}
+    div#GAMEStockChecker.clickAndReserve .confirmReservation {
+        font-size: 1.2em;
+        position: relative;
+        display: block;
+    }
+    div#GAMEStockChecker.clickAndReserve .confirmationButton {
+    	font-size:1.5rem;
+    }
+    div#GAMEStockChecker.clickAndReserve .backButton {
+    	margin: 0;
+        background-color: #fff;
+        padding: 10px 0 10px 0;
+        font-size: 1.6rem;
+    }
+    div.stockCheckerExpanded .close {
+    	position: absolute;
+    	width: auto;
+    	height: auto;
+    	line-height: 3em;
+    	right: 0;
+    	text-align: center;
+    	top: 0;
+    }
+    div.stockCheckerExpanded a.closeButton, div.stockCheckerExpanded a.closeButton:hover {
+    	text-decoration:none;
+    }
+    div.stockCheckerExpanded span.glyph {
+        font-family: "gameui";
+        font-weight: normal;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        vertical-align: middle;
+    }
+    div.stockCheckerExpanded div.close a.closeButton .glyph:before {
+        color: #333;
+        content: "2";
+        font-family: "gameui";
+        font-size: 3em;
+        text-decoration: none;
+    }
+    div#GAMEStockChecker.clickAndReserve .confirmationPane {
+    	width:100%;
+    }
+    div#GAMEStockChecker.clickAndReserve div.reservationLabel, div#GAMEStockChecker.clickAndReserve div.reservationHeldUntilContainer {
+    	font-size:1.5rem;
+    }
+	.confirmationInformation {
+		width:100%;
+	}
+	div#GAMEStockChecker.clickAndReserve div.stockCheckerExpanded {
+	    overflow-y:scroll;
+	    bottom:0;
+	    top:0;
+	    left:0;
+	    right:0;
+	    padding-top:2.5em;
+	}
+}
+
+.regionTitle span#notMobile {
+    float: right;
+    width: 50%;
+    border-bottom: 0px;
+    display: inline;
+}
+
+.clickAndReserveNotAvailableContainer {
+	float: right;
+    font-size: 14px;
+}
+
+div#GAMEStockChecker.clickAndReserve .chooseThisStoreRegion {
+	float: right;
+    width: 100%;
+    font-size: 14px;
+    padding: 0px;
+}
