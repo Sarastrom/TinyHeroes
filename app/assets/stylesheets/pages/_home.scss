@@ -4,7 +4,7 @@ background-image: asset-url('home-background.gif');
 background-size: cover;
 background-repeat: no-repeat;
 width: 100vw;
-height: 92vh;
+height: 100vh;
 // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
 background-position: center;
 display: flex;
@@ -12,9 +12,10 @@ p{
   color: white;
   padding: 20px;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
-  margin-top: 35px;
+  margin-top: -135px;
   margin-left: 20px;
+  text-shadow: 1px 1px 4px black;
   }
 }
