@@ -6,20 +6,11 @@
   <% @childrens.each do |user| %>
     <div class="family-card">
       <div><%= image_tag user.avatar.nil? ? 'unicorn.png' : user.avatar, class: 'avatar-icon' %></div>
-      <p><%= user.first_name %></p>
+      <p><%= user.first_name.capitalize %></p>
       <div class="gold-coins">
         <div class="coin-amount"><%= user.reward_amount.nil? ? '0' : user.reward_amount %></div>
         </div>
       </div>
-  <!--     <div class="progress-status">
-      <% if user.reward_amount == 50 %>
-      <div class="d-flex justify-content-center align-items-center;" style="background-color: white; width:50px; border:1px solid black;">Progress: 20%</div>
-      <% elsif user.reward_amount == 100 %>
-      <div class="d-flex justify-content-center align-items-center;" style="background-color: green; width:100px; border:1px solid black;">Progress: 40%</div>
-      <% else user.reward_amount == 150 %>
-      <div class="d-flex justify-content-center align-items-center;" style="background-color: gold; width:150px; border:1px solid black;">Progress: 60%</div>
-      <% end %>
-      </div> -->
   <% end %>
 
   <% if current_user.is_parent? %>
