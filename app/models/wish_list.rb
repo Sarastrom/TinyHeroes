@@ -5,8 +5,8 @@ class WishList < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :users, through: :likes
 
-  def children_who_liked
-    list = likes.map do |like|
+  def children_who_liked(current_user)
+    list = likes.select {|like| like.user.parent == current_user}.map do |like|
       like.user.first_name
     end
     if list.empty?
