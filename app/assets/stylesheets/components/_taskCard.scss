@@ -28,16 +28,11 @@ body {
   border-color: green;
 }
 
-.not-completed {
-  border-style: solid;
-  border-width: medium;
-  border-color: red;
-}
-
 .verified {
   border-style: solid;
   border-width: medium;
   border-color: gold;
+  opacity:0.4;
 }
 
 .task-card h2 {
@@ -93,7 +88,7 @@ p {
   background: #167afb;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
-  margin-bottom: -8px;
+  margin-bottom: 10px;
   border-radius: 5px;
   position: relative;
 }
