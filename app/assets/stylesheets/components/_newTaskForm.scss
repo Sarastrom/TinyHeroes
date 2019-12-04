@@ -1,0 +1,57 @@
+.modal-content {
+  background-color: #58B873;
+  border-radius: 10px;
+  }
+
+.modal-header {
+  border-bottom: none;
+  margin: 0 auto;
+  background-color: #58B873;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  h3 {
+  color: white;
+  font-weight: bold!important;
+  }
+}
+
+.form-group {
+  color: white;
+}
+.btn-primary {
+  color: #fff;
+  font-weight: bold;
+  background-color: #F6C953;
+  border-radius:5px;
+  border-color: #F6C953;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #F7C026;
+  border-color: #F7C026;
+}
+.close {
+  color: white;
+}
+.text-muted {
+  color: #FFFFFF !important;
+}
+
+.icon {
+  opacity: 0.7;
+}
+
+input#mission_name::placeholder {
+ font-style: italic;
+}
+
+textarea#mission_description::placeholder {
+ font-style: italic;
+}
+
+input#mission_reward::placeholder {
+ font-style: italic;
+}
+
