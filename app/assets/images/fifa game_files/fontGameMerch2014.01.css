@@ -10,7 +10,7 @@
 .glyph.gameMerch {font-family:"gamemerch2014"!important;font-weight:normal;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing: antialiased;}
 
 
-/*/////////////////////////////////////////////////////// 
+/*///////////////////////////////////////////////////////
 Glyph Index
 ///////////////////////////////////////////////////////*/
 
@@ -29,7 +29,7 @@ Glyph Index
 
 .glyph.gameMerch.logoAtariGames:before {content: "!";}
 .glyph.gameMerch.logoAtariBlock:before {content: "@";}
-.glyph.gameMerch.logoAtari2600:before {content: "£";}.
+.glyph.gameMerch.logoAtari2600:before {content: "£";}
 .glyph.gameMerch.logoCommodore:before {content: "$";}
 .glyph.gameMerch.logoSpectrum:before {content: "%";}
 .glyph.gameMerch.logoNeoGeo:before {content: "^";}
