@@ -12,10 +12,10 @@ User.destroy_all
 
 # creator: dad - this was in the create above
 puts "Create Users"
-dad = User.create!(email: "Ryan@aol.com", password: "123123", avatar: nil, reward_amount: nil, first_name: "Ryan", last_name: "Fleming", parent_id: nil, is_parent: true)
+dad = User.create!(email: "ryan@aol.com", password: "123123", avatar: nil, reward_amount: nil, first_name: "Ryan", last_name: "Fleming", parent_id: nil, is_parent: true)
 mum = User.create!(email: "sara@gmail.com", password: "123123", avatar: nil, reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
-kid1 = User.create!(email: "Maria@gmail.com.com", password: "123123", avatar: nil, reward_amount: 0, first_name: "Maria", last_name: "Strom", parent_id: dad.id, is_parent: false)
-kid2 = User.create!(email: "Kailash@gmail.com", password: "123123", avatar: nil, reward_amount: 0, first_name: "Kailash", last_name: "Strom", parent_id: dad.id, is_parent: false)
+kid1 = User.create!(email: "maria@gmail.com", password: "123123", avatar: nil, reward_amount: 0, first_name: "Maria", last_name: "Strom", parent_id: dad.id, is_parent: false)
+kid2 = User.create!(email: "kailash@gmail.com", password: "123123", avatar: nil, reward_amount: 0, first_name: "Kailash", last_name: "Strom", parent_id: dad.id, is_parent: false)
 
 puts "Create Missions"
 

@@ -9,6 +9,37 @@
         <% end  %>
 
         <div class="pending-tasks">
+          <% if @missions.any? %>
+          <h1>Completed missions</h1>
+            <% @missions.each do |mission| %>
+              <div class="task-card <%= mission.verify? ? 'verified': 'completed' %>">
+                <div class="task-mission.user.first_namemission.user.first_namemission.user.first_namemission.user.first_nameicon">
+                  <% if mission.icon %>
+                    <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
+                  <% end %>
+                </div>
+                <div class="task-card-info">
+                  <h2><%= mission.name.capitalize %></h2>
+                  <p><%= mission.description %></p>
+                  <% if mission.user && mission.user != current_user %>
+                  <h3> <%= mission.user.first_name.capitalize %></h3>
+                  <% end %>
+                  <% if mission.user && mission.user == current_user && !mission.completed %>
+                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post, class: "done-button" %>
+                  <% end %>
+                  <% if mission.user && mission.user.parent == current_user && mission.completed? && !mission.verify? %>
+                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post, class: "verify-button" %>
+                  <% end %>
+                </div>
+                <div class="task-card-button">
+                  <div class="coin"><h6><%= mission.reward %></h6></div>
+                  <p><%= mission.completed %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="pending-tasks">
           <% if @not_completed_missions.any? %>
           <h1>Pending missions</h1>
             <% @not_completed_missions.each do |mission| %>
@@ -40,37 +71,6 @@
           <% end %>
         </div>
       </div>
-        <div class="pending-tasks">
-          <% if @missions.any? %>
-          <h1>Completed missions</h1>
-            <% @missions.each do |mission| %>
-              <div class="task-card <%= mission.verify? ? 'verified': 'completed' %>">
-                <div class="task-mission.user.first_namemission.user.first_namemission.user.first_namemission.user.first_nameicon">
-                  <% if mission.icon %>
-                    <%= image_tag mission.icon, height: 70, width: 70, crop: :fill %>
-                  <% end %>
-                </div>
-                <div class="task-card-info">
-                  <h2><%= mission.name %></h2>
-                  <p><%= mission.description %></p>
-                  <% if mission.user && mission.user != current_user %>
-                  <h3> <%= mission.user.first_name %></h3>
-                  <% end %>
-                  <% if mission.user && mission.user == current_user && !mission.completed %>
-                    <%= link_to 'Done', mark_complete_mission_path(mission), method: :post, class: "done-button" %>
-                  <% end %>
-                  <% if mission.user && mission.user.parent == current_user && mission.completed? && !mission.verify? %>
-                    <%= link_to 'Verify', mark_verify_mission_path(mission), method: :post, class: "verify-button" %>
-                  <% end %>
-                </div>
-                <div class="task-card-button">
-                  <div class="coin"><h6><%= mission.reward %></h6></div>
-                  <p><%= mission.completed %></p>
-                </div>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
       <div class="favourite-tasks">
         <% if @favourites.any? %>
           <h1>Favourites</h1>
@@ -91,7 +91,7 @@
               <%= f.input :name, required: true, label: 'Title', placeholder: 'Laundry'%>
               <%= f.input :description, label:'Useful tips', placeholder: 'Wash the whites (program: cottons at 60 C)', input_html: { maxlength: 91 }%>
               <%= f.input :reward, required: true, placeholder: '20', input_html: { required: true }, hint: 'The average reward is 20 coins/task ≈ 50p'%>
-              <%= f.input :user_id, label:'Assign to', as: :radio_buttons, collection: current_user.children, label_method: :first_name %>
+              <%= f.input :user_id, required: true, label:'Assign to', as: :radio_buttons, collection: current_user.children, label_method: :first_name %>
               <div class="mission-group">
                 <label class="control-label radio optional"></label>
                 <input type="hidden" name="mission[icon]" value="">
