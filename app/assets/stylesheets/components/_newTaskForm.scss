@@ -1,12 +1,12 @@
 .modal-content {
-  background-color: #58B873;
+  background-color: #3a94ff;
   border-radius: 10px;
   }
 
 .modal-header {
   border-bottom: none;
   margin: 0 auto;
-  background-color: #58B873;
+  background-color: #3a94ff;
   border-radius: 10px 10px 0 0;
   display: flex;
   align-items: center;
@@ -27,11 +27,13 @@
   border-radius:5px;
   border-color: #F6C953;
 }
+
 .btn-primary:hover {
   color: #fff;
   background-color: #F7C026;
   border-color: #F7C026;
 }
+
 .close {
   color: white;
 }

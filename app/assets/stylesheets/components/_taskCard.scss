@@ -155,6 +155,20 @@ p {
   padding: 3px;
 }
 
+.verify-button:hover {
+  color: #fff;
+  background-color: #006f00;
+  border-color: #006f00;
+  text-decoration: none;
+}
+
+.verify-button:active {
+  color: #fff;
+  background-color: #006f00;
+  border-color: #006f00;
+  text-decoration: none;
+}
+
 .done-button {
   color: #fff;
   background-color: green;
@@ -163,5 +177,18 @@ p {
   font-size: 10px;
   padding: 3px;
   width: 50px;
+}
 
+.done-button:hover {
+  color: #fff;
+  background-color: #006f00;
+  border-color: #006f00;
+  text-decoration: none;
+}
+
+.done-button:active {
+  color: #fff;
+  background-color: #006f00;
+  border-color: #006f00;
+  text-decoration: none;
 }
