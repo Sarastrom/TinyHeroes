@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    missions_path
+   users_family_path
   end
      protected
 
