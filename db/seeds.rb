@@ -17,12 +17,12 @@ Mission.create!(name:"Dishes", description:"Do the dishes from tonight's dinner"
 
 puts "Create WL"
 
-wish1 = WishList.new(title: "Doll House", amount: 100, user: kid2)
+wish1 = WishList.new(title: "Doll House", amount: 100, user: mum1)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575453764/dollhouse_rkqoe4.jpg')
 wish1.photo.attach(io: file, filename: 'winter.png', content_type: 'image/png')
 wish1.save!
 
-wish7 = WishList.new(title: "Stay up an extra hour", amount: 40, user: kid1)
+wish7 = WishList.new(title: "Stay up an extra hour", amount: 40, user: mum1)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575456477/Screenshot_2019-12-04_at_10.47.13_am_nh6wlb.png')
 wish7.photo.attach(io: file, filename: 'default.png', content_type: 'image/png')
 wish7.save!
