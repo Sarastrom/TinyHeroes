@@ -36,10 +36,11 @@
     <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
   </head>
   <body>
-    <% unless controller.controller_name != "PagesController" && controller.action_name == "home" %>
-    <%= render 'shared/navbar' %>
+    <% if ["pages", "sessions", "registrations"].include?(controller_name) %>
+
+      <%= render 'shared/homenavbar' %>
     <% else %>
-    <%= render 'shared/homenavbar' %>
+      <%= render 'shared/navbar' %>
       <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
