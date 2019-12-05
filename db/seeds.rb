@@ -7,6 +7,7 @@ User.destroy_all
 puts "Create Users"
 mum1 = User.create!(email: "sara@mail.com", password: "123123", avatar: "003-dinosaur.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
 mum2 = User.create!(email: "sara@gmail.com", password: "123123", avatar: "wizard.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
+kid2 = User.create!(email: "kailash@gmail.com", password: "123123", avatar: "robot.png", reward_amount: 0, first_name: "Kailash", last_name: "Strom", parent_id: mum.id, is_parent: false)
 
 puts "Create Missions"
 
@@ -17,22 +18,22 @@ Mission.create!(name:"Dishes", description:"Do the dishes from tonight's dinner"
 
 puts "Create WL"
 
-wish1 = WishList.new(title: "Doll House", amount: 100, user: mum1)
+wish1 = WishList.new(title: "Doll House", amount: 100, user: kid2)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575453764/dollhouse_rkqoe4.jpg')
 wish1.photo.attach(io: file, filename: 'winter.png', content_type: 'image/png')
 wish1.save!
 
-wish7 = WishList.new(title: "Stay up an extra hour", amount: 40, user: mum1)
+wish7 = WishList.new(title: "Stay up an extra hour", amount: 40, user: kid2)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575456477/Screenshot_2019-12-04_at_10.47.13_am_nh6wlb.png')
 wish7.photo.attach(io: file, filename: 'default.png', content_type: 'image/png')
 wish7.save!
 
-wish2 = WishList.new(title: "Batman Figure", amount: 50, user: kid1)
+wish2 = WishList.new(title: "Batman Figure", amount: 50, user: kid2)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575452999/Screenshot_2019-12-04_at_9.49.33_am_yx7lr6.png')
 wish2.photo.attach(io: file, filename: 'Spider-Man.png', content_type: 'image/png')
 wish2.save!
 
-wish6 = WishList.new(title: "The Sims", amount: 60, user: kid1)
+wish6 = WishList.new(title: "The Sims", amount: 60, user: kid2)
 file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1574863854/Screenshot_2019-11-27_at_2.10.17_pm_epvsbz.png')
 wish6.photo.attach(io: file, filename: 'sims.png', content_type: 'image/png')
 wish6.save!
