@@ -12,8 +12,8 @@ kid2 = User.create!(email: "charlie@gmail.com", password: "123123", avatar: "rob
 
 puts "Create Missions"
 
-Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees)", reward: 20, creator: mum1, completed: false, icon: "laundryright.png", verify: false, user: kid1)
-Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward: 15, creator: mum2, completed: false, icon: "dish.png", verify: false, user: kid2)
+Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees)", reward: 40, creator: mum1, completed: false, icon: "laundryright.png", verify: false, user: kid1)
+Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward: 40, creator: mum2, completed: false, icon: "dish.png", verify: false, user: kid2)
 
 puts "Create WL"
 
