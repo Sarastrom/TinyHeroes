@@ -5,15 +5,17 @@ User.destroy_all
 
 # creator: dad - this was in the create above
 puts "Create Users"
-mum1 = User.create!(email: "sara@google.com", password: "123123", avatar: "003-dinosaur.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
+mum1 = User.create!(email: "sara@mail.com", password: "123123", avatar: "003-dinosaur.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
 mum2 = User.create!(email: "sara@gmail.com", password: "123123", avatar: "wizard.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
-kid1 = User.create!(email: "charlie@google.com", password: "123123", avatar: "pegasus.png", reward_amount: 0, first_name: "Charlie", last_name: "Strom", parent_id: mum1.id, is_parent: false)
+kid1 = User.create!(email: "charlie@mail.com", password: "123123", avatar: "pegasus.png", reward_amount: 0, first_name: "Charlie", last_name: "Strom", parent_id: mum1.id, is_parent: false)
 kid2 = User.create!(email: "charlie@gmail.com", password: "123123", avatar: "robot.png", reward_amount: 0, first_name: "Charlie", last_name: "Strom", parent_id: mum2.id, is_parent: false)
 
 puts "Create Missions"
 
-Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees)", reward: 40, creator: mum1, completed: false, icon: "laundryright.png", verify: false, user: kid1)
-Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward: 40, creator: mum2, completed: false, icon: "dish.png", verify: false, user: kid2)
+Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees)", reward: 50, creator: mum1, completed: true, icon: "laundryright.png", verify: true, user: kid1)
+Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward: 50, creator: mum2, completed: true, icon: "dish.png", verify: true, user: kid2)
+Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees)", reward: 50, creator: mum2, completed: false, icon: "laundryright.png", verify: false, user: kid2)
+Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward: 50, creator: mum1, completed: false, icon: "dish.png", verify: false, user: kid1)
 
 puts "Create WL"
 
