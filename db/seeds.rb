@@ -5,16 +5,16 @@ User.destroy_all
 
 # creator: dad - this was in the create above
 puts "Create Users"
-dad = User.create!(email: "ryan@aol.com", password: "123123", avatar: nil, reward_amount: nil, first_name: "Ryan", last_name: "Fleming", parent_id: nil, is_parent: true)
-mum = User.create!(email: "sara@gmail.com", password: "123123", avatar: nil, reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
-kid1 = User.create!(email: "maria@gmail.com", password: "123123", avatar: nil, reward_amount: 0, first_name: "Maria", last_name: "Strom", parent_id: dad.id, is_parent: false)
-kid2 = User.create!(email: "kailash@gmail.com", password: "123123", avatar: nil, reward_amount: 0, first_name: "Kailash", last_name: "Strom", parent_id: dad.id, is_parent: false)
+dad = User.create!(email: "ryan@aol.com", password: "123123", avatar: "003-dinosaur.png", reward_amount: nil, first_name: "Ryan", last_name: "Fleming", parent_id: nil, is_parent: true)
+mum = User.create!(email: "sara@gmail.com", password: "123123", avatar: "wizard.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
+kid1 = User.create!(email: "maria@gmail.com", password: "123123", avatar: "pegasus.png", reward_amount: 0, first_name: "Maria", last_name: "Strom", parent_id: dad.id, is_parent: false)
+kid2 = User.create!(email: "kailash@gmail.com", password: "123123", avatar: "robot.png", reward_amount: 0, first_name: "Kailash", last_name: "Strom", parent_id: mum.id, is_parent: false)
 
 puts "Create Missions"
 
 Mission.create!(name:"Laundry", description:"I need you to do the white laundry (mainly bed sheets 60 degrees)", reward: 20, creator: dad, completed: false, icon: "laundryright.png", verify: false, user: kid1)
 Mission.create!(name:"Dishes", description:"Do the dishes from tonights dinner", reward: 15, creator: dad, completed: true, icon: "dish.png", verify: false, user: kid1)
-Mission.create!(name:"Walk the dog", description:"Not Hugo, only Dennis", reward: 30, creator: dad, completed: true, icon: "dog.png", verify: true, user: kid2)
+Mission.create!(name:"Walk the dog", description:"Not Hugo, only Dennis", reward: 30, creator: mum, completed: true, icon: "dog.png", verify: true, user: kid2)
 
 puts "Create WL"
 
