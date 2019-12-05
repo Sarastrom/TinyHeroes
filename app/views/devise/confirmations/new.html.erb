@@ -1,6 +1,9 @@
 <% content_for(:navbar_text) { "OOPS" } %>
-<h2>Resend confirmation instructions</h2>
+<div>
 
+
+<div class="signup-form">
+  <h4 style="color:white;">Resend confirmation instructions</h4>
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
@@ -19,3 +22,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

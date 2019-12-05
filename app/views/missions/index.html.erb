@@ -92,11 +92,11 @@
               <%= f.input :user_id, required: true, label:'Assign to', as: :radio_buttons, collection: current_user.children, label_method: :first_name %>
               <div class="mission-group">
                 <label class="control-label radio optional"></label>
-                <input type="hidden" name="mission[icon]" value="">
+                <input type="hidden" required name="mission[icon]" value="">
                 <% Mission::MISSION_ICON.each do |icon| %>
-                  <input type="radio" class="d-none" value="<%= icon %>" name="mission[icon]" id="mission_icon_<%= icon %>">
+                  <input type="radio" required class="d-none" value="<%= icon %>" name="mission[icon]" id="mission_icon_<%= icon %>">
                   <label for="mission_icon_<%= icon %>">
-                    <%= image_tag icon, style: "height: 50px;", class: "icon" %>
+                    <%= image_tag icon, style: "height: 50px;", class:"icon" %>
                   </label>
                 <% end %>
               </div>
