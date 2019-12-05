@@ -10,7 +10,7 @@ class WishList < ApplicationRecord
       like.user.first_name.capitalize
     end
     if list.empty?
-      return "No claims yet 😢"
+      return "😢"
     else
       return "Claimed by #{list.uniq.to_sentence}"
     end
