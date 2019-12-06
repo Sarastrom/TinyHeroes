@@ -7,7 +7,7 @@ User.destroy_all
 puts "Create Users"
 mum1 = User.create!(email: "sara@mail.com", password: "123123", avatar: "003-dinosaur.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
 mum2 = User.create!(email: "sara@gmail.com", password: "123123", avatar: "wizard.png", reward_amount: nil, first_name: "Sara", last_name: "Strom", parent_id: nil, is_parent: true)
-kid2 = User.create!(email: "kailash@gmail.com", password: "123123", avatar: "robot.png", reward_amount: 0, first_name: "Kailash", last_name: "Strom", parent_id: mum1.id, is_parent: false)
+kid2 = User.create!(email: "charlie@mail.com", password: "123123", avatar: "robot.png", reward_amount: 0, first_name: "Charlie", last_name: "Strom", parent_id: mum1.id, is_parent: false)
 
 puts "Create Missions"
 
@@ -18,8 +18,8 @@ Mission.create!(name:"Dishes", description:"Do the dishes from tonight's dinner"
 
 puts "Create WL"
 
-wish1 = WishList.new(title: "Doll House", amount: 100, user: kid2)
-file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575453764/dollhouse_rkqoe4.jpg')
+wish1 = WishList.new(title: "AirPods", amount: 400, user: kid2)
+file = URI.open('https://res.cloudinary.com/debjoekzj/image/upload/v1575634586/airpods_h44ux5.png')
 wish1.photo.attach(io: file, filename: 'winter.png', content_type: 'image/png')
 wish1.save!
 
