@@ -1,21 +1,29 @@
 // Specific CSS for your home-page
 .homeImage {
-background-image: asset-url('home-background.gif');
-background-size: cover;
-background-repeat: no-repeat;
-width: 100vw;
-height: 100vh;
-// linear-gradient: 0 0 15px rgba(0,0,0,0.2);
-background-position: center;
-display: flex;
-p{
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: -135px;
-  margin-left: 20px;
-  text-shadow: 1px 1px 4px black;
+  background-image: asset-url('home-background.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
+  background-position: center;
+  display: flex;
+
+  p {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -135px;
+    margin-left: 20px;
+    text-shadow: 1px 1px 4px black;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .homeImage {
+    background-image: asset-url('home-background.png');
+    background-size: cover;
   }
 }
