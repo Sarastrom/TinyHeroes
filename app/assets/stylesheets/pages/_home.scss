@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .homeImage {
-  background-image: asset-url('home-background.gif');
+  background-image: asset-url('desktop-background.gif');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -21,9 +21,19 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+.content {
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+  }
+
+@media only screen and (max-width: 600px) {
   .homeImage {
-    background-image: asset-url('home-background.png');
+    background-image: asset-url('home-background.gif');
     background-size: cover;
+    background-repeat: no-repeat;
+  // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
+    background-position: center;
+    display: flex;
   }
 }
