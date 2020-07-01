@@ -8,6 +8,7 @@
   // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
   background-position: center;
   display: flex;
+  justify-content: center;
 
   p {
     color: white;
@@ -21,18 +22,37 @@
   }
 }
 
+#login_button {
+  position: absolute;
+  width: 300px;
+  height: 58px;
+  background: #0b3bae;
+  border-radius: 20px;
+  border-style: none;
+}
+
+#signup_button {
+  position: absolute;
+  width: 300px;
+  height: 58px;
+  top: 400px;
+  background: #F6C953;
+  border-radius: 20px;
+  border-style: none;
+}
+
 .content {
-    display: flex!important;
-    align-items: center!important;
-    justify-content: center!important;
-  }
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
 @media only screen and (max-width: 600px) {
   .homeImage {
     background-image: asset-url('home-background.gif');
     background-size: cover;
     background-repeat: no-repeat;
-  // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
+    // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
     background-position: center;
     display: flex;
   }
