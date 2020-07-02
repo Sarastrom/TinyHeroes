@@ -1,59 +1,6 @@
-// Specific CSS for your home-page
-.homeImage {
-  background-image: asset-url('desktop-background.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
-  background-position: center;
-  display: flex;
+.sign-up-buttons {
+  display: grid;
   justify-content: center;
-
-  p {
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: -135px;
-    margin-left: 20px;
-    text-shadow: 1px 1px 4px black;
-  }
 }
 
-#login_button {
-  position: absolute;
-  width: 300px;
-  height: 58px;
-  background: #0b3bae;
-  border-radius: 20px;
-  border-style: none;
-}
-
-#signup_button {
-  position: absolute;
-  width: 300px;
-  height: 58px;
-  top: 400px;
-  background: #F6C953;
-  border-radius: 20px;
-  border-style: none;
-}
-
-.content {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-@media only screen and (max-width: 600px) {
-  .homeImage {
-    background-image: asset-url('home-background.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    // linear-gradient: 0 0 15px rgba(0,0,0,0.2);
-    background-position: center;
-    display: flex;
-  }
-}
+@media only screen and (max-width: 600px) {}

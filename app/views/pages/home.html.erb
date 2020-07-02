@@ -1,8 +1,8 @@
 <% content_for(:navbar_text) { "TINY HEROES" } %>
 
-<div class="homeImage">
-
-  <div class="content"><p>Reward your tiny heroes for their efforts!</p>
+  <div class="container-fluid">
+  <div class="sign-up-buttons">
+  <p>Reward your tiny heroes for their efforts!</p>
     <button id="login_button"><%= link_to "Log In", new_user_session_path, class: "button_text" %></button>
     <button id="signup_button"><%= link_to "Sign Up", new_user_registration_path, class: "button_text" %></button>
   </div>
