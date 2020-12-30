@@ -11,7 +11,7 @@
   margin: 20px 0px;
   width: 300px;
   height: 58px;
-  background: #F6C953;
+  background: #f6c953;
   border-radius: 20px;
   border-style: none;
 }
@@ -19,4 +19,14 @@
 .button_text {
   color: white;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  #login_button {
+    width: 50vw !important;
+  }
+
+  #signup_button {
+    width: 50vw !important;
+  }
 }

@@ -1,6 +1,63 @@
 .sign-up-buttons {
   display: grid;
+  -webkit-box-pack: center;
   justify-content: center;
+  text-align: center;
 }
 
-@media only screen and (max-width: 600px) {}
+.cloud {
+  width: 50vw;
+  background: #f8fefe;
+  opacity: 80%;
+  border-radius: 20px;
+  border: 1px solid white;
+  display: flex;
+}
+
+.notifierText {
+  margin: 30px;
+}
+
+/* .ghost {
+  z-index: 9999;
+  position: relative;
+  left: -100px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+} */
+
+@media only screen and (max-width: 600px) {
+  .container-fluid {
+    height: 100vh;
+    background-image: url(home-background.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cloud {
+    width: 80vw;
+    margin-top: 130px;
+  }
+
+  .notifierText {
+    margin: 20px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid {
+    height: 100vh;
+    background-image: url(home-background.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
