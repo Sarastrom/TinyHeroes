@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+.invisible {
+  display: none !important;
+}
+
+.home-navbar {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-2 {
+  display: flex;
+}
+
 .cloud {
   width: 50vw;
   background: #f8fefe;
@@ -16,6 +28,25 @@
 
 .notifierText {
   margin: 30px;
+}
+
+.ghost {
+  position: relative;
+  left: 330px;
+  margin-bottom: 40px;
+  width: 100px;
+  height: 100px;
+}
+
+.container-fluid {
+  height: 100vh;
+  background-image: url(desktop-background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* .ghost {
@@ -47,6 +78,10 @@
     margin: 20px;
     font-size: 13px;
   }
+
+  .ghost {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -59,5 +94,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .ghost {
+    display: none;
   }
 }

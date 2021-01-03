@@ -2,16 +2,16 @@
 
   <div class="container-fluid">
   <div class="sign-up-buttons">
+  <%= image_tag ("ghost.png"), :class=>"ghost" %>
+
   <div class="cloud">
   <p class="notifierText">Tiny Heroes is a simplified way to tell off your children. Create and manage multiple tasks and reward them with gold!</p>
   </div>
+
     <button id="login_button"><%= link_to "Log In", new_user_session_path, class: "button_text" %></button>
 
     <button id="signup_button"><%= link_to "Sign Up", new_user_registration_path, class: "button_text" %></button>
-
     </div>
-
-    <%# <%= image_tag ("ghost.png"), :class=>"ghost", height: 40, width: 40 %>
 
 
 </div>
