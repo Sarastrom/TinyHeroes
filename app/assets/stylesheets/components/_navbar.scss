@@ -1,5 +1,5 @@
 .navbar {
-  color: white!important;
+  color: white !important;
   font-family: Roboto;
   font-weight: bold;
   align-items: center;
@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #0B3BAE;
+  background: #8bd3dd;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -41,7 +41,7 @@
   background-color: #ffffff;
   box-shadow: 5px 5px 10px #bdbdbd;
   a {
-    color: #0B3BAE!important;
+    color: #0b3bae !important;
   }
 }
 .dropdown-item {
@@ -57,21 +57,22 @@
   margin-bottom: 4px;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+  color: white;
 }
 .header {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
 }
 
 .home-navbar {
-  display:flex;
-  justify-content: center;
+  display: none;
+  /* justify-content: center;
   align-items: center;
-  font-size:20px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2ch;
   color: white;
-  background-color:#0b3bae;
-  padding:20px;
+  padding: 20px; */
 }

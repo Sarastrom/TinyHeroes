@@ -1,27 +1,65 @@
 #login_button {
   margin: 20px 0px;
-  width: 300px;
-  height: 58px;
-  background: #0b3bae;
+  width: 240px !important;
+  height: 78px;
+  background: #3da9fc;
   border-radius: 20px;
   border-style: none;
+  margin-right: 100px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+#login_button:hover {
+  background: #5eb9ff;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+#signup_button:hover {
+  background: #5eb9ff;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 #signup_button {
   margin: 20px 0px;
-  width: 300px;
-  height: 58px;
-  background: #f6c953;
+  width: 240px !important;
+  height: 78px;
+  background: #3da9fc;
   border-radius: 20px;
   border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+#title {
+  font-size: 40px;
+  color: white;
+  letter-spacing: 2ch;
+  margin-bottom: 30px;
+  text-shadow: #3d76e280;
+  margin-bottom: 100px;
 }
 
 .button_text {
   color: white;
   font-weight: bold;
+  text-decoration: none !important;
 }
 
-@media only screen and (min-width: 768px) {
+.button_text:hover {
+  color: rgb(194, 194, 194);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
   #login_button {
     width: 50vw !important;
   }
