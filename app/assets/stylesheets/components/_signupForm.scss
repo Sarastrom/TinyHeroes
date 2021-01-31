@@ -1,5 +1,9 @@
 .signup-form {
   background-color: #3a94ff;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 100px;
 }
 
 .btn {
@@ -16,4 +20,21 @@
 
 .avatar {
   opacity: 0.7;
+}
+
+#signup-wallpaper > div > a {
+  display: none;
+}
+
+#new_user > div.form-actions > input {
+  width: 100%;
+}
+
+.form-group.email.required.user_email,
+.form-group.string.required.user_first_name,
+.form-group.string.required.user_last_name,
+.form-group.password.required.user_password,
+.form-group.password.required.user_password_confirmation {
+  width: 600px;
+  padding: 10px;
 }
