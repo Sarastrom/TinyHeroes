@@ -6,9 +6,6 @@
   border-radius: 20px;
   border-style: none;
   margin-right: 100px;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 #login_button:hover {
@@ -32,15 +29,12 @@
   background: #3da9fc;
   border-radius: 20px;
   border-style: none;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 #title {
-  font-size: 40px;
+  font-size: 60px;
   color: white;
-  letter-spacing: 2ch;
+  letter-spacing: 1ch;
   margin-bottom: 30px;
   text-shadow: #3d76e280;
   font-weight: bold;
@@ -59,18 +53,17 @@
 
 @media only screen and (max-width: 768px) {
   #login_button {
-    width: 50vw !important;
+    width: 90vw !important;
     margin-right: 0 !important;
   }
 
   #signup_button {
-    width: 50vw !important;
+    width: 90vw !important;
   }
 
   #title {
-    font-size: 35px;
-    color: #3da9fc;
-    text-shadow: #3d76e280;
-    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: 0ch;
+    color: #5eb9ff;
   }
 }

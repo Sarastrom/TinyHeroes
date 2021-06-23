@@ -27,7 +27,7 @@ body {
 .login-form {
   border-radius: 5px;
   background-color: #5eb9ff;
-  width: 30%;
+  width: 30vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -40,4 +40,11 @@ body {
 
 .form-check-input.is-valid ~ .form-check-label {
   color: #0b3bae;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-form {
+    width: 100vw;
+    margin-top: 20vh;
+  }
 }
