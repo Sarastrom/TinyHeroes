@@ -7,87 +7,90 @@
 // }
 
 .profile-page {
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  padding:10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
   border-bottom: 1px solid white;
-  margin:5px 0;
-    h4 {
-  font-family: 'Solway', serif;
-  margin: 11px;
+  margin: 5px 0;
+  h4 {
+    font-family: "Solway", serif;
+    margin: 11px;
+    color: white;
+    font-size: 22px;
   }
-  p{
+  p {
     margin: 4px 18px;
   }
 }
 
-.profile-align{
-justify-content: space-around;
--webkit-box-align: center;
-align-items: center;
-margin: 5px 0;
-padding: 10px 0;
+.profile-align {
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px 0;
 }
 
 .username {
   display: flex;
-  justify-content:left;
+  justify-content: left;
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .extras {
-  color: #0B3BAE!important;
+  color: #0b3bae !important;
+  display: flex;
+  justify-content: center;
+  top: 100px;
+  position: relative;
 }
 
 .avatar-icon {
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
 }
 
-.edit-btnbtn{
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    color: white;
-    font-size: 25px;
-    height: 80px;
-    width: 340px;
-    background: #167afb;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    margin-top: 27px;
-    margin-left: 19px;
-    border-radius: 5px
+.edit-btnbtn {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  height: 80px;
+  width: 340px;
+  background: #167afb;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-left: 19px;
+  border-radius: 5px;
 }
 
 .back-btnbtn {
   display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    color: white;
-    font-size: 25px;
-    height: 80px;
-    width: 340px;
-    background: #167afb;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    margin-top: -7px;
-    margin-left: 19px;
-    border-radius: 5px
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  height: 80px;
+  width: 340px;
+  background: #167afb;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-left: 19px;
+  border-radius: 5px;
 }
 
 #missions {
   display: flex;
   flex-direction: column;
 }
-
 
 .mission-cards {
   display: flex;
@@ -103,14 +106,14 @@ padding: 10px 0;
   height: 84px;
   width: 340px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
 .mission-card h2 {
-  color: #0B3BAE;
+  color: #0b3bae;
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 2px;
@@ -124,23 +127,23 @@ padding: 10px 0;
   padding: 10px;
   flex-grow: 1;
   // height: inherit;
-p {
-  margin-bottom: 4px;
+  p {
+    margin-bottom: 4px;
   }
 }
 
 .mission-card-info h3 {
   font-size: 10px;
   font-weight: bold;
-  color: #F48779;
+  color: #f48779;
   margin-bottom: 0px;
 }
 
 .mission-icon {
-  color: #12C0B6;
+  color: #12c0b6;
   font-size: 38px;
   position: relative;
-  padding:5px;
+  padding: 5px;
 }
 
 // .coin {
@@ -164,4 +167,3 @@ p {
 //     align-items:center;
 //   }
 // }
-

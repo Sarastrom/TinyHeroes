@@ -1,7 +1,8 @@
 .modal-content {
   background-color: #3a94ff;
   border-radius: 10px;
-  }
+  top: 66px;
+}
 
 .modal-header {
   border-bottom: none;
@@ -12,8 +13,8 @@
   align-items: center;
   color: white;
   h3 {
-  color: white;
-  font-weight: bold!important;
+    color: white;
+    font-weight: bold !important;
   }
 }
 
@@ -23,9 +24,9 @@
 .btn-primary {
   color: #fff;
   font-weight: bold;
-  background-color: #0B3BAE;
-  border-radius:5px;
-  border-color: #0B3BAE;
+  background-color: #0b3bae;
+  border-radius: 5px;
+  border-color: #0b3bae;
 }
 
 .btn-primary:hover {
@@ -38,7 +39,7 @@
   color: white;
 }
 .text-muted {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .icon {
@@ -46,14 +47,13 @@
 }
 
 input#mission_name::placeholder {
- font-style: italic;
+  font-style: italic;
 }
 
 textarea#mission_description::placeholder {
- font-style: italic;
+  font-style: italic;
 }
 
 input#mission_reward::placeholder {
- font-style: italic;
+  font-style: italic;
 }
-

@@ -32,11 +32,12 @@
 }
 
 #title {
-  font-size: 60px;
+  font-size: 70px;
   color: white;
-  letter-spacing: 1ch;
+  letter-spacing: 0.3ch;
   margin-bottom: 30px;
-  text-shadow: #3d76e280;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
   font-weight: bold;
 }
 
@@ -64,6 +65,8 @@
   #title {
     font-size: 60px;
     letter-spacing: 0ch;
-    color: #5eb9ff;
+    color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000, 1px 1px 0 #000;
   }
 }

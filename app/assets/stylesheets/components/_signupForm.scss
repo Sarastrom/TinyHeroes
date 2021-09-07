@@ -2,7 +2,6 @@
   background-color: #3a94ff;
   display: flex;
   justify-content: center;
-  height: 100vh;
   padding-top: 100px;
 }
 
@@ -35,6 +34,29 @@
 .form-group.string.required.user_last_name,
 .form-group.password.required.user_password,
 .form-group.password.required.user_password_confirmation {
-  width: 600px;
+  width: 450px;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .signup-form {
+    background-color: #3a94ff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+  .avatar {
+    width: 40px !important;
+    height: 45px !important;
+  }
+
+  .form-group.email.required.user_email,
+  .form-group.string.required.user_first_name,
+  .form-group.string.required.user_last_name,
+  .form-group.password.required.user_password,
+  .form-group.password.required.user_password_confirmation {
+    width: 300px;
+    padding: 10px;
+  }
 }

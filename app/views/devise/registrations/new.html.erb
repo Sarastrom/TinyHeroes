@@ -25,13 +25,13 @@
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
       <div class="form-group">
-        <label class="control-label radio optional">Avatar</label>
+        <label class="control-label radio optional">Choose your Hero below!</label>
         <input type="hidden" name="user[avatar]" value="">
         <div class="avatar-choices">
           <% User::AVATAR_NAMES.each do |avatar| %>
             <input type="radio" required class="d-none" value="<%= avatar %>" name="user[avatar]" id="user_avatar_<%= avatar %>">
             <label for="user_avatar_<%= avatar %>">
-              <%= image_tag avatar, style: "height: 50px;", class:"avatar" %>
+              <%= image_tag avatar, style: "height: 80px; width: 80px;", class:"avatar" %>
             </label>
           <% end %>
         </div>
