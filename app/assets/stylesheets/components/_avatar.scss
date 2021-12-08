@@ -21,7 +21,10 @@
 //   border: white 1px solid;
 // }
 
+.avatar :active {
+  display: none;
+}
 
-.avatar :active{
-    display: none;
-  }
+.avatar:hover {
+  opacity: 1;
+}
