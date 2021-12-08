@@ -2,7 +2,7 @@
   background-color: #3a94ff;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .btn {
@@ -21,11 +21,11 @@
   opacity: 0.7;
 }
 
-#signup-wallpaper > div > a {
+#signup-wallpaper>div>a {
   display: none;
 }
 
-#new_user > div.form-actions > input {
+#new_user>div.form-actions>input {
   width: 100%;
 }
 
