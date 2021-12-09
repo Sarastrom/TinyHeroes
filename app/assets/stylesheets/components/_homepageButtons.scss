@@ -40,7 +40,25 @@
     -1px 1px 0 #000, 1px 1px 0 #000;
   font-weight: bold;
   position: relative;
-  top:130px;
+  top:205px;
+  text-transform: uppercase;
+  -webkit-animation: smooth 1s cubic-bezier(0, 0, 0, 0.98);
+  -moz-animation: smooth 1s cubic-bezier(0, 0, 0, 0.98);
+  -o-animation: smooth 1s cubic-bezier(0, 0, 0, 0.98);
+  -ms-animation: smooth 1s cubic-bezier(0, 0, 0, 0.98);
+  animation: smooth 1s cubic-bezier(0, 0, 0, 0.98);
+
+  @-webkit-keyframes smooth {
+    0% {   transform: scale(0, 0);
+    }
+    100% {   transform: scale(1, 1);}
+}
+
+@keyframes smooth {
+  0% {   transform: scale(0, 0);
+  }
+  100% {   transform: scale(1, 1);}
+}
 }
 
 .button_text {
@@ -65,10 +83,22 @@
   }
 
   #title {
-    font-size: 60px;
+    font-size: 70px;
     letter-spacing: 0ch;
     color: white;
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
       -1px 1px 0 #000, 1px 1px 0 #000;
+      position: relative;
+      top:190px;
+      text-transform: uppercase;
   }
+}
+
+@media only screen and (max-width: 600px) { 
+  #title {
+    font-size: 50px !important;
+    margin: 30px 0;
+    position: relative;
+    top: 201px;
+}
 }

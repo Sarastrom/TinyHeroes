@@ -18,7 +18,6 @@
 
 .cloud {
   background: #f8fefe;
-  opacity: 80%;
   border-radius: 20px;
   border: 1px solid white;
   margin-bottom: 50px;
@@ -27,9 +26,6 @@
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
-.cloud:hover {
-  opacity: 100%;
-}
 
 .notifierText {
   margin: 20px;
@@ -38,15 +34,17 @@
 
 .ghost {
   position: relative;
-  left: 0%;
+  top: -100px;
   margin-bottom: 40px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .ghost:hover {
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
+  -webkit-filter: hue-rotate(250deg);
+    filter: hue-rotate(250deg);
 }
 
 .container-fluid {
@@ -57,6 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
 }
 
 /* .ghost {
@@ -76,10 +75,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
   }
 
   .cloud {
-    margin-top: 130px;
+    margin-bottom:0px;
+
   }
 
   .notifierText {
@@ -101,9 +102,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
   }
 
   .ghost {
     display: none;
   }
+
+  .cloud {
+    margin-top:220px;
+  }
+
 }
